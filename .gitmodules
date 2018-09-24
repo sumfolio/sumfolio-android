@@ -6,3 +6,6 @@
 	path = app/src/main/jni/sumpay-core
 	url = https://github.com/sumcoinlabs/sumpay-core.git
 	ignore = dirty
+[submodule "app/src/main/jni/sumpay-core"]
+	path = app/src/main/jni/sumpay-core
+	url = https://github.com/sumcoinlabs/sumpay-core.git
