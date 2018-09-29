@@ -22,13 +22,13 @@ performance you need on a mobile device.
 ## The next step in wallet security:
 
 Tortilla is designed to protect you from malware, browser security holes,
-*even physical theft*. With AES hardware encryption, app sandboxing, and verified boot, Tortilla represents a significant security advance over web and desktop wallets.
+*even physical theft*. With AES hardware encryption, app sandboxing, and verified boot, Sumpay represents a significant security advance over web and desktop wallets.
 
 ## Beautiful simplicity:
 
 Simplicity is Tortilla's core design principle. A simple backup phrase is
 all you need to restore your wallet on another device if yours is ever lost or
-broken.  Because **Tortilla** is [deterministic](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki),
+broken.  Because **Sumpay** is [deterministic](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki),
 your balance and transaction history can be recovered from just your backup phrase.
 
 ## Features:
@@ -44,7 +44,7 @@ your balance and transaction history can be recovered from just your backup phra
 1. Download and install Java 7 or up
 2. Download and Install the latest Android studio
 3. Download and install the latest NDK https://developer.android.com/ndk/downloads/index.html or download it in android studio by "choosing the NDK" and press "download"
-4. Go to https://github.com/sumcoinlabs/tortillawallet-android and clone or download the project
+4. Go to https://github.com/sumcoinlabs/sumpay-android and clone or download the project
 5. Open the project with Android Studio and let the project sync
 6. Go to SDK Manager and download all the SDK Platforms and SDK Tools
 7. Initialize the submodules - <code>git submodule init</code>
