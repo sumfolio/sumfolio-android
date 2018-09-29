@@ -48,6 +48,8 @@ add_library( # The name of the library.
              src/main/jni/sumpay-core/BRInt.h
              src/main/jni/sumpay-core/BRKey.c
              src/main/jni/sumpay-core/BRKey.h
+             src/main/jni/sumpay-core/BRKeyECIES.h
+             src/main/jni/sumpay-core/BRKEYECIES.c
              src/main/jni/sumpay-core/BRMerkleBlock.c
              src/main/jni/sumpay-core/BRMerkleBlock.h
              src/main/jni/sumpay-core/BRPaymentProtocol.c

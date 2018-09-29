@@ -128,11 +128,11 @@ public class WalletTests {
         amountAsLong = bigDecimal.longValue();
         assertEquals(String.valueOf(amountAsLong), "1");
 
-        obj = CryptoUriParser.parseRequest(app, "bitcoin:n2eMqTT929pb1RDNuqEnxdaLau1rxy3efi?amount=21000000");
+        obj = CryptoUriParser.parseRequest(app, "bitcoin:n2eMqTT929pb1RDNuqEnxdaLau1rxy3efi?amount=100000000");
         assertEquals(obj.address, "n2eMqTT929pb1RDNuqEnxdaLau1rxy3efi");
         bigDecimal = obj.amount;
         amountAsLong = bigDecimal.longValue();
-        assertEquals(String.valueOf(amountAsLong), "2100000000000000");
+        assertEquals(String.valueOf(amountAsLong), "10000000000000000");
 
         // test for floating point rounding issues, these values cannot be exactly represented with an IEEE 754 double
         obj = CryptoUriParser.parseRequest(app, "bitcoin:n2eMqTT929pb1RDNuqEnxdaLau1rxy3efi?amount=20999999.99999999");
