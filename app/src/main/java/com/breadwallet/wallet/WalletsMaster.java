@@ -106,6 +106,7 @@ public class WalletsMaster {
             KVStoreManager.getInstance().putTokenListMetaData(app, mTokenListMetaData); //put default currencies if null
         }
 
+		// Maybe this controls what wallets are brought online?
         for (TokenListMetaData.TokenInfo enabled : mTokenListMetaData.enabledCurrencies) {
 
             boolean isHidden = mTokenListMetaData.isCurrencyHidden(enabled.symbol);
