@@ -69,10 +69,10 @@ public final class BRConstants {
     public static final int CURRENT_UNIT_MBITS = 1;
     public static final int CURRENT_UNIT_BITCOINS = 2;
 
-    public static final String BITS_SYMBOL = "\u0180";
+    public static final String BITS_SYMBOL = "\u03C3";
     public static final String ETH_SYMBOL = "\u039E";
     public static final String BITCOIN_SYBMOL_OLD = "\u0243";
-    public static final String BITCOIN_SYMBOL = "\u20BF";
+    public static final String BITCOIN_SYMBOL = "\u2211";
 
     public static final RoundingMode ROUNDING_MODE = RoundingMode.HALF_EVEN;
     public static final boolean WRITE_AHEAD_LOGGING = true;
@@ -126,7 +126,7 @@ public final class BRConstants {
      */
 
     public static final String URL_PRIVACY_POLICY = "https://brd.com/privacy";
-    public static final String URL_TWITTER = "https://twitter.com/breadapp";
+    public static final String URL_TWITTER = "https://twitter.com/sumcoinindex";
     public static final String URL_REDDIT = "https://reddit.com/r/breadwallet/";
     public static final String URL_BLOG  = "https://brd.com/blog/";
 
