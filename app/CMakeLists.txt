@@ -2,7 +2,7 @@
 # This ensures that a certain set of CMake features is available to
 # your build.
 
-cmake_minimum_required(VERSION 3.4.1)
+cmake_minimum_required(VERSION 3.6.0)
 
 # Specifies a library name, specifies whether the library is STATIC or
 # SHARED, and provides relative paths to the source code. You can
@@ -20,7 +20,8 @@ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -std=c99 -DANDROID_STL=gnustl_static -DANDRO
 # -Wint-conversion -Wbool-conversion -Wenum-conversion -Wassign-enum -Wno-shorten-64-to-32 -Wpointer-sign -Wnewline-eof
 # -Wdeprecated-declarations -Wno-sign-conversion
 
-add_library( # The name of the library.
+add_library(
+
              core
 
              # Shared library.
@@ -195,6 +196,7 @@ include_directories(src/main/secp/)
 
 # add lib dependencies
 target_link_libraries(
+
     core
     android
     log)
