@@ -82,7 +82,7 @@ public abstract class BaseBitcoinWalletManager extends BRCoreWalletManager imple
     private static final long MAXIMUM_AMOUNT = 100000000; // Maximum number of coins available
     private static final int SYNC_MAX_RETRY = 3;
 
-    public static final String BITCOIN_SYMBOL = "SUM";
+    public static final String BITCOIN_SYMBOL = "BTC";
     public static final String BITCASH_SYMBOL = "BCH";
 
     private WalletSettingsConfiguration mSettingsConfig;
