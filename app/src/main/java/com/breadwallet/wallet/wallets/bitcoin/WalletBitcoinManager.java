@@ -50,9 +50,9 @@ public final class WalletBitcoinManager extends BaseBitcoinWalletManager {
     private static final String TAG = WalletBitcoinManager.class.getName();
 
     private static final String ISO = BITCOIN_SYMBOL;
-    private static final String NAME = "Bitcoin";
-    private static final String SCHEME = "bitcoin";
-    private static final String COLOR = "#f29500";
+    private static final String NAME = "Sumcoin";
+    private static final String SCHEME = "sumcoin";
+    private static final String COLOR = "#2A6ED3";
 
     private static WalletBitcoinManager mInstance;
 
