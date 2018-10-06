@@ -1,3 +1,4 @@
+//
 package com.breadwallet.wallet.wallets.bitcoin;
 
 import android.app.Activity;
@@ -124,7 +125,7 @@ public abstract class BaseBitcoinWalletManager extends BRCoreWalletManager imple
         Context app = BreadApp.getBreadContext();
         if (0 == mCreateWalletAllowedRetries) {
             // The app is dead - tell the user...
-            BRDialog.showSimpleDialog(app, "Wallet error!", "please contact support@breadwallet.com");
+            BRDialog.showSimpleDialog(app, "Wallet error!", "please contact support@sumfolio.org");
             // ... for now just this.  App crashes after this
             return null;
         }
