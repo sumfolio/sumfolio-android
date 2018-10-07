@@ -79,7 +79,7 @@ public abstract class BaseBitcoinWalletManager extends BRCoreWalletManager imple
 
     public static final int ONE_BITCOIN_IN_SATOSHIS = 100000000; // 1 Bitcoin in satoshis, 100 millions
     private static final long MAXIMUM_AMOUNT = 100000000; // Maximum number of coins available
-    private static final int SYNC_MAX_RETRY = 2;
+    private static final int SYNC_MAX_RETRY = 3;
 
     public static final String BITCOIN_SYMBOL = "BTC";
     public static final String BITCASH_SYMBOL = "BCH";
