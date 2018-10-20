@@ -8,18 +8,18 @@ import android.os.NetworkOnMainThreadException;
 import android.support.annotation.NonNull;
 import android.util.Log;
 
-import com.breadwallet.BreadApp;
-import com.breadwallet.core.BRCoreKey;
-import com.breadwallet.tools.animation.UiUtils;
-import com.breadwallet.tools.crypto.Base58;
-import com.breadwallet.tools.manager.BRReportsManager;
-import com.breadwallet.tools.manager.BRSharedPrefs;
-import com.breadwallet.tools.crypto.CryptoHelper;
-import com.breadwallet.tools.security.BRKeyStore;
-import com.breadwallet.tools.threads.executor.BRExecutor;
-import com.breadwallet.tools.util.Utils;
-import com.breadwallet.wallet.WalletsMaster;
-import com.breadwallet.wallet.abstracts.BaseWalletManager;
+import com.sumpay.BreadApp;
+import com.sumpay.core.BRCoreKey;
+import com.sumpay.tools.animation.UiUtils;
+import com.sumpay.tools.crypto.Base58;
+import com.sumpay.tools.manager.BRReportsManager;
+import com.sumpay.tools.manager.BRSharedPrefs;
+import com.sumpay.tools.crypto.CryptoHelper;
+import com.sumpay.tools.security.BRKeyStore;
+import com.sumpay.tools.threads.executor.BRExecutor;
+import com.sumpay.tools.util.Utils;
+import com.sumpay.wallet.WalletsMaster;
+import com.sumpay.wallet.abstracts.BaseWalletManager;
 import com.platform.kvstore.RemoteKVStore;
 import com.platform.kvstore.ReplicatedKVStore;
 import com.platform.tools.TokenHolder;
@@ -50,7 +50,7 @@ import java.util.TimeZone;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import static com.breadwallet.tools.manager.BRApiManager.HEADER_WALLET_ID;
+import static com.sumpay.tools.manager.BRApiManager.HEADER_WALLET_ID;
 import io.sigpipe.jbsdiff.InvalidHeaderException;
 import io.sigpipe.jbsdiff.ui.FileUI;
 import okhttp3.Interceptor;
@@ -64,14 +64,14 @@ import okhttp3.ResponseBody;
 import okio.Buffer;
 import okio.BufferedSink;
 
-import static com.breadwallet.tools.util.BRCompressor.gZipExtract;
+import static com.sumpay.tools.util.BRCompressor.gZipExtract;
 
 
 /**
  * BreadWallet
  * <p/>
- * Created by Mihail Gutan on <mihail@breadwallet.com> 9/29/16.
- * Copyright (c) 2016 breadwallet LLC
+ * Created by Mihail Gutan on <mihail@sumpay.com> 9/29/16.
+ * Copyright (c) 2016 sumpay LLC
  * <p/>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -138,7 +138,7 @@ public class APIClient {
     private Context mContext;
 
     public enum FeatureFlags {
-        BUY_BITCOIN("buy-bitcoin"),
+        BUY_BITCOIN("buy-sumcoin"),
         EARLY_ACCESS("early-access");
 
         private final String text;
@@ -198,7 +198,7 @@ public class APIClient {
     }
 
     //only for testing
-    public String buyBitcoinMe() {
+    public String buySumcoinMe() {
         if (UiUtils.isMainThread()) {
             throw new NetworkOnMainThreadException();
         }

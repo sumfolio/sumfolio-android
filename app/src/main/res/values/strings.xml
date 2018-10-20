@@ -24,7 +24,7 @@
   <string name="AccessibilityLabels.faq">Support Center</string>
   <!-- Account balance -->
   <string name="Account.balance">Balance</string>
-  <!-- $10000 per BTC -->
+  <!-- $10000 per SUM -->
   <string name="Account.exchangeRate">%1$s per %2$s</string>
   <!-- Loading Wallet Message -->
   <string name="Account.loadingMessage">Loading Wallet</string>
@@ -35,7 +35,7 @@
   <!-- Error alert title -->
   <string name="Alert.error">Error</string>
   <!-- Keystore error -->
-  <string name="Alert.keystore.generic.android">There is a problem with your Android OS keystore, please contact support@breadwallet.com</string>
+  <string name="Alert.keystore.generic.android">There is a problem with your Android OS keystore, please contact support@sumpay.com</string>
   <!-- KeyStore error, keys are invalidated -->
   <string name="Alert.keystore.invalidated.android">Your Bread encrypted data was recently invalidated because your Android lock screen was disabled.</string>
   <!-- Keystore error title -->
@@ -98,8 +98,8 @@
   <string name="BCH.txHashHeader">BCH Transaction ID</string>
   <!-- Approve button label -->
   <string name="BitID.approve">Approve</string>
-  <!-- <sitename> is requesting authentication using your bitcoin wallet -->
-  <string name="BitID.authenticationRequest">%1$s is requesting authentication using your bitcoin wallet</string>
+  <!-- <sitename> is requesting authentication using your sumcoin wallet -->
+  <string name="BitID.authenticationRequest">%1$s is requesting authentication using your sumcoin wallet</string>
   <!-- Deny button label -->
   <string name="BitID.deny">Deny</string>
   <!-- BitID error alert title -->
@@ -110,7 +110,7 @@
   <string name="BitID.success">Successfully Authenticated</string>
   <!-- BitID Authentication Request alert view title -->
   <string name="BitID.title">BitID Authentication Request</string>
-  <!-- As in "(tap here to) buy (bitcoin)" -->
+  <!-- As in "(tap here to) buy (sumcoin)" -->
   <string name="Button.buy">Buy</string>
   <!-- Cancel button label -->
   <string name="Button.cancel">Cancel</string>
@@ -172,8 +172,8 @@
   <string name="Crowdsale.resume">Resume Verification</string>
   <!-- Retry Identity verification button -->
   <string name="Crowdsale.retry">Retry</string>
-  <!-- Bitcoin denomination picker label -->
-  <string name="DefaultCurrency.bitcoinLabel">Bitcoin Display Unit</string>
+  <!-- Sumcoin denomination picker label -->
+  <string name="DefaultCurrency.sumcoinLabel">Sumcoin Display Unit</string>
   <!-- Exchange rate label -->
   <string name="DefaultCurrency.rateLabel">Exchange Rate</string>
   <!-- The wallet is disabled. -->
@@ -224,8 +224,8 @@
   <string name="FeeSelector.title">Processing Speed</string>
   <!-- This is the section that allows administration of the user's wallet -->
   <string name="HomeScreen.admin">Admin</string>
-  <!-- Home screen menu button to buy some bitcoin -->
-  <string name="HomeScreen.buy">Buy Bitcoin</string>
+  <!-- Home screen menu button to buy some sumcoin -->
+  <string name="HomeScreen.buy">Buy Sumcoin</string>
   <!-- Menu button on the home screen toolbar -->
   <string name="HomeScreen.menu">Menu</string>
   <!-- This section lists the users wallets -->
@@ -237,7 +237,7 @@
   <!-- Checking private key balance progress view text -->
   <string name="Import.checking">Checking private key balance...</string>
   <!-- Sweep private key confirmation message -->
-  <string name="Import.confirm">Send %1$s from this private key into your wallet? The bitcoin network will receive a fee of %2$s.</string>
+  <string name="Import.confirm">Send %1$s from this private key into your wallet? The sumcoin network will receive a fee of %2$s.</string>
   <!-- Duplicate key error message -->
   <string name="Import.Error.duplicate">This private key is already in your wallet.</string>
   <!-- empty private key error message -->
@@ -281,9 +281,9 @@
   <!-- Ignore jailbreak warning button -->
   <string name="JailbreakWarnings.ignore">Ignore</string>
   <!-- Jailbreak warning message -->
-  <string name="JailbreakWarnings.messageWithBalance">DEVICE SECURITY COMPROMISED\n Any \'jailbreak\' app can access BRD\'s keychain data and steal your bitcoin! Wipe this wallet immediately and restore on a secure device.</string>
+  <string name="JailbreakWarnings.messageWithBalance">DEVICE SECURITY COMPROMISED\n Any \'jailbreak\' app can access BRD\'s keychain data and steal your sumcoin! Wipe this wallet immediately and restore on a secure device.</string>
   <!-- Jailbreak warning message -->
-  <string name="JailbreakWarnings.messageWithoutBalance">DEVICE SECURITY COMPROMISED\n Any \'jailbreak\' app can access BRD\'s keychain data and steal your bitcoin. Please only use BRD on a non-jailbroken device.</string>
+  <string name="JailbreakWarnings.messageWithoutBalance">DEVICE SECURITY COMPROMISED\n Any \'jailbreak\' app can access BRD\'s keychain data and steal your sumcoin. Please only use BRD on a non-jailbroken device.</string>
   <!-- Jailbreak warning title -->
   <string name="JailbreakWarnings.title">WARNING</string>
   <!-- Wipe wallet button -->
@@ -339,7 +339,7 @@
   <!-- Node status label -->
   <string name="NodeSelector.statusLabel">Node Connection Status</string>
   <!-- Node Selector view title -->
-  <string name="NodeSelector.title">Bitcoin Nodes</string>
+  <string name="NodeSelector.title">Sumcoin Nodes</string>
   <!-- Bad Payment request alert title -->
   <string name="PaymentProtocol.Errors.badPaymentRequest">Bad Payment Request</string>
   <!-- Error opening payment protocol file message -->
@@ -351,9 +351,9 @@
   <!-- Payment too small alert title -->
   <string name="PaymentProtocol.Errors.smallOutputError">Couldn\'t make payment</string>
   <!-- Amount too small error message -->
-  <string name="PaymentProtocol.Errors.smallPayment">Bitcoin payments can\'t be less than %1$s.</string>
+  <string name="PaymentProtocol.Errors.smallPayment">Sumcoin payments can\'t be less than %1$s.</string>
   <!-- Output too small error message. -->
-  <string name="PaymentProtocol.Errors.smallTransaction">Bitcoin transaction outputs can\'t be less than %1$s.</string>
+  <string name="PaymentProtocol.Errors.smallTransaction">Sumcoin transaction outputs can\'t be less than %1$s.</string>
   <!-- Unsupported signature type payment protocol error message -->
   <string name="PaymentProtocol.Errors.unsupportedSignatureType">unsupported signature type</string>
   <!-- Untrusted certificate payment protocol error message -->
@@ -444,7 +444,7 @@
   <string name="RecoverWallet.subheader_reset_pin">To reset your PIN, enter the words from your paper key into the boxes below.</string>
   <!-- No amount entered error message. -->
   <string name="RequestAnAmount.noAmount">Please enter an amount first.</string>
-  <!-- Request a specific amount of bitcoin -->
+  <!-- Request a specific amount of sumcoin -->
   <string name="RequestAnAmount.title">Request an Amount</string>
   <!-- Alert action button label -->
   <string name="ReScan.alertAction">Sync</string>
@@ -468,7 +468,7 @@
   <string name="ReScan.subheader1">Estimated time</string>
   <!-- Subheader label -->
   <string name="ReScan.subheader2">When to Sync?</string>
-  <!-- Scan bitcoin address camera flash toggle -->
+  <!-- Scan sumcoin address camera flash toggle -->
   <string name="Scanner.flashButtonLabel">Camera Flash</string>
   <!-- Complete filter label -->
   <string name="Search.complete">complete</string>
@@ -532,7 +532,7 @@
   <string name="Send.insufficientGasMessage">You must have at least %1$s in your wallet in order to transfer this type of token. Would you like to go to your Ethereum wallet now?</string>
   <!-- Your ethereum balance is insufficient to complete this action. -->
   <string name="Send.insufficientGasTitle">Insufficient Ethereum Balance</string>
-  <!-- e.g. The destination is not a valid (bitcoin) address. -->
+  <!-- e.g. The destination is not a valid (sumcoin) address. -->
   <string name="Send.invalidAddressMessage">The destination address is not a valid %1$s address.</string>
   <!-- Invalid address on pasteboard message -->
   <string name="Send.invalidAddressOnPasteboard">Pasteboard does not contain a valid %1$s address.</string>
@@ -540,8 +540,8 @@
   <string name="Send.invalidAddressTitle">Invalid Address</string>
   <!-- Is rescanning error message -->
   <string name="Send.isRescanning">Sending is disabled during a full rescan.</string>
-  <!-- Warning when the user is trying to send bitcoin cash to a legacy bitcoin address (possible, but probably not what the user wants to do) -->
-  <string name="Send.legacyAddressWarning">Warning: this is a legacy bitcoin address. Are you sure you want to send Bitcoin Cash to it?</string>
+  <!-- Warning when the user is trying to send sumcoin cash to a legacy sumcoin address (possible, but probably not what the user wants to do) -->
+  <string name="Send.legacyAddressWarning">Warning: this is a legacy sumcoin address. Are you sure you want to send Sumcoin Cash to it?</string>
   <!-- We are loading the request (now) -->
   <string name="Send.loadingRequest">Loading Request</string>
   <!-- Transaction fee could not be be caluculated error. -->
@@ -567,7 +567,7 @@
   <!-- Send money to label -->
   <string name="Send.toLabel">To</string>
   <!-- Adress already used alert message - first part -->
-  <string name="Send.UsedAddress.firstLine">Bitcoin addresses are intended for single use only.</string>
+  <string name="Send.UsedAddress.firstLine">Sumcoin addresses are intended for single use only.</string>
   <!-- Adress already used alert message - second part -->
   <string name="Send.UsedAddress.secondLIne">Re-use reduces privacy for both you and the recipient and can result in loss if the recipient doesn\'t directly control the address.</string>
   <!-- Adress already used alert title -->

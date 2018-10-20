@@ -11,7 +11,7 @@
                 android:fitsSystemWindows="true"
                 android:focusableInTouchMode="true"
                 android:orientation="vertical"
-                tools:context="com.breadwallet.presenter.activities.HomeActivity">
+                tools:context="com.sumpay.presenter.activities.HomeActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -31,7 +31,7 @@
                 android:layout_marginTop="60dp"
                 android:background="@drawable/brd_logo_gradient"/>
 
-            <com.breadwallet.presenter.customviews.BaseTextView
+            <com.sumpay.presenter.customviews.BaseTextView
                 android:id="@+id/total_assets_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -42,7 +42,7 @@
                 android:textColor="@color/text_total_assets_label"
                 app:customTFont="CircularPro-Book.otf"/>
 
-            <com.breadwallet.presenter.customviews.BaseTextView
+            <com.sumpay.presenter.customviews.BaseTextView
                 android:id="@+id/total_assets_usd"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -81,7 +81,7 @@
                         android:layout_height="match_parent"
                         android:background="@color/extra_light_blue_background">
 
-                        <com.breadwallet.presenter.customviews.BaseTextView
+                        <com.sumpay.presenter.customviews.BaseTextView
                             android:id="@+id/prompt_title"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -92,7 +92,7 @@
                             android:textSize="16sp"
                             app:customTFont="CircularPro-Bold.otf"/>
 
-                        <com.breadwallet.presenter.customviews.BaseTextView
+                        <com.sumpay.presenter.customviews.BaseTextView
                             android:id="@+id/prompt_description"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -114,7 +114,7 @@
                             android:layout_marginStart="16dp"
                             android:weightSum="2">
 
-                            <com.breadwallet.presenter.customviews.BRButton
+                            <com.sumpay.presenter.customviews.BRButton
                                 android:id="@+id/dismiss_button"
                                 android:layout_width="10dp"
                                 android:layout_height="60dp"
@@ -129,7 +129,7 @@
                                 app:hasShadow="false"
                                 app:isBreadButton="true"/>
 
-                            <com.breadwallet.presenter.customviews.BRButton
+                            <com.sumpay.presenter.customviews.BRButton
                                 android:id="@+id/continue_button"
                                 android:layout_width="10dp"
                                 android:layout_height="60dp"
@@ -160,7 +160,7 @@
 
                 </android.support.v7.widget.RecyclerView>
 
-                <com.breadwallet.presenter.customviews.BRNotificationBar
+                <com.sumpay.presenter.customviews.BRNotificationBar
                     android:id="@+id/notification_bar"
                     android:layout_width="match_parent"
                     android:layout_height="160dp"
@@ -208,7 +208,7 @@
                         android:layout_gravity="center"
                         android:src="@drawable/ic_buy_cash"/>
 
-                    <com.breadwallet.presenter.customviews.BaseTextView
+                    <com.sumpay.presenter.customviews.BaseTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -230,7 +230,7 @@
                         android:layout_gravity="center"
                         android:background="@drawable/ic_trade"/>
 
-                    <com.breadwallet.presenter.customviews.BaseTextView
+                    <com.sumpay.presenter.customviews.BaseTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -252,7 +252,7 @@
                         android:layout_marginBottom="4dp"
                         android:background="@drawable/ic_menu"/>
 
-                    <com.breadwallet.presenter.customviews.BaseTextView
+                    <com.sumpay.presenter.customviews.BaseTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"

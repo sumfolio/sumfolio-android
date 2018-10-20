@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.util.Log;
 
-import com.breadwallet.BreadApp;
+import com.sumpay.BreadApp;
 import com.platform.APIClient;
 import com.platform.BRHTTPHelper;
 import com.platform.HTTPServer;
@@ -24,8 +24,8 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * BreadWallet
  * <p/>
- * Created by Mihail Gutan on <mihail@breadwallet.com> 10/19/16.
- * Copyright (c) 2016 breadwallet LLC
+ * Created by Mihail Gutan on <mihail@sumpay.com> 10/19/16.
+ * Copyright (c) 2016 sumpay LLC
  * <p/>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal

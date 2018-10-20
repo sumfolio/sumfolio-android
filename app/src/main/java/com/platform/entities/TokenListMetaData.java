@@ -3,7 +3,7 @@ package com.platform.entities;
 
 import android.util.Log;
 
-import com.breadwallet.presenter.entities.TokenItem;
+import com.sumpay.presenter.entities.TokenItem;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,8 +11,8 @@ import java.util.List;
 /**
  * BreadWallet
  * <p/>
- * Created by Mihail Gutan on <mihail@breadwallet.com> 6/22/17.
- * Copyright (c) 2017 breadwallet LLC
+ * Created by Mihail Gutan on <mihail@sumpay.com> 6/22/17.
+ * Copyright (c) 2017 sumpay LLC
  * <p/>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -40,7 +40,7 @@ public class TokenListMetaData {
      * <p>
      * {
      * “classVersion”: 2, //used for versioning the schema
-     * "enabledCurrencies": ["btc":"eth": "erc20:0xsd98fjetc"] enabled currencies
+     * "enabledCurrencies": ["sum":"eth": "erc20:0xsd98fjetc"] enabled currencies
      * "hiddenCurrencies": "bch"] hidden currencies
      * }
      */
@@ -55,7 +55,7 @@ public class TokenListMetaData {
 
         if (this.enabledCurrencies == null) {
             this.enabledCurrencies = new ArrayList<>();
-            this.enabledCurrencies.add(new TokenInfo("BTC", false, null));
+            this.enabledCurrencies.add(new TokenInfo("SUM", false, null));
             this.enabledCurrencies.add(new TokenInfo("BCH", false, null));
             this.enabledCurrencies.add(new TokenInfo("ETH", false, null));
         }

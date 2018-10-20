@@ -1,4 +1,4 @@
-package com.breadwallet.database;
+package com.sumpay.database;
 
 import android.app.Activity;
 import android.support.test.filters.LargeTest;
@@ -6,18 +6,18 @@ import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 import android.util.Log;
 
-import com.breadwallet.presenter.activities.settings.TestActivity;
-import com.breadwallet.presenter.entities.BRMerkleBlockEntity;
-import com.breadwallet.presenter.entities.BRPeerEntity;
-import com.breadwallet.presenter.entities.BRTransactionEntity;
-import com.breadwallet.presenter.entities.BlockEntity;
-import com.breadwallet.presenter.entities.CurrencyEntity;
-import com.breadwallet.presenter.entities.PeerEntity;
-import com.breadwallet.tools.sqlite.BtcBchTransactionDataStore;
-import com.breadwallet.tools.sqlite.RatesDataSource;
-import com.breadwallet.tools.sqlite.MerkleBlockDataSource;
-import com.breadwallet.tools.sqlite.PeerDataSource;
-import com.breadwallet.tools.threads.executor.BRExecutor;
+import com.sumpay.presenter.activities.settings.TestActivity;
+import com.sumpay.presenter.entities.BRMerkleBlockEntity;
+import com.sumpay.presenter.entities.BRPeerEntity;
+import com.sumpay.presenter.entities.BRTransactionEntity;
+import com.sumpay.presenter.entities.BlockEntity;
+import com.sumpay.presenter.entities.CurrencyEntity;
+import com.sumpay.presenter.entities.PeerEntity;
+import com.sumpay.tools.sqlite.BtcBchTransactionDataStore;
+import com.sumpay.tools.sqlite.RatesDataSource;
+import com.sumpay.tools.sqlite.MerkleBlockDataSource;
+import com.sumpay.tools.sqlite.PeerDataSource;
+import com.sumpay.tools.threads.executor.BRExecutor;
 
 import org.junit.After;
 import org.junit.Assert;
@@ -34,8 +34,8 @@ import java.util.concurrent.CountDownLatch;
 /**
  * BreadWallet
  * <p/>
- * Created by Mihail Gutan on <mihail@breadwallet.com> 9/30/16.
- * Copyright (c) 2016 breadwallet LLC
+ * Created by Mihail Gutan on <mihail@sumpay.com> 9/30/16.
+ * Copyright (c) 2016 sumpay LLC
  * <p/>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -81,16 +81,16 @@ public class DatabaseTests {
     private void cleanUp() {
         Activity app = mActivityRule.getActivity();
 
-        BtcBchTransactionDataStore.getInstance(app).deleteAllTransactions(app, "BTC");
+        BtcBchTransactionDataStore.getInstance(app).deleteAllTransactions(app, "SUM");
         BtcBchTransactionDataStore.getInstance(app).deleteAllTransactions(app, "BCH");
 
-        RatesDataSource.getInstance(app).deleteAllCurrencies(app, "BTC");
+        RatesDataSource.getInstance(app).deleteAllCurrencies(app, "SUM");
         RatesDataSource.getInstance(app).deleteAllCurrencies(app, "BCH");
 
-        MerkleBlockDataSource.getInstance(app).deleteAllBlocks(app, "BTC");
+        MerkleBlockDataSource.getInstance(app).deleteAllBlocks(app, "SUM");
         MerkleBlockDataSource.getInstance(app).deleteAllBlocks(app, "BCH");
 
-        PeerDataSource.getInstance(app).deleteAllPeers(app, "BTC");
+        PeerDataSource.getInstance(app).deleteAllPeers(app, "SUM");
         PeerDataSource.getInstance(app).deleteAllPeers(app, "BCH");
     }
 
@@ -102,11 +102,11 @@ public class DatabaseTests {
     @Test
     public void testSetLocal() {
 
-        // Test BTC transaction insert
+        // Test SUM transaction insert
         Activity app = mActivityRule.getActivity();
         BtcBchTransactionDataStore tds = BtcBchTransactionDataStore.getInstance(app);
-        tds.putTransaction(app, "BTC", new BRTransactionEntity(new byte[0], 1234, 4314123, "some hash", "BTC"));
-        List<BRTransactionEntity> txs = tds.getAllTransactions(app, "BTC");
+        tds.putTransaction(app, "SUM", new BRTransactionEntity(new byte[0], 1234, 4314123, "some hash", "SUM"));
+        List<BRTransactionEntity> txs = tds.getAllTransactions(app, "SUM");
         Assert.assertNotNull(txs);
         Assert.assertEquals(txs.size(), 1);
         Assert.assertArrayEquals(txs.get(0).getBuff(), new byte[0]);
@@ -145,8 +145,8 @@ public class DatabaseTests {
 
 
         MerkleBlockDataSource mds = MerkleBlockDataSource.getInstance(mActivityRule.getActivity());
-        mds.putMerkleBlocks(app, "BTC", new BlockEntity[]{new BlockEntity("SOme cool stuff".getBytes(), 123343)});
-        List<BRMerkleBlockEntity> ms = mds.getAllMerkleBlocks(app, "BTC");
+        mds.putMerkleBlocks(app, "SUM", new BlockEntity[]{new BlockEntity("SOme cool stuff".getBytes(), 123343)});
+        List<BRMerkleBlockEntity> ms = mds.getAllMerkleBlocks(app, "SUM");
         Assert.assertNotNull(ms);
         Assert.assertEquals(ms.size(), 1);
         Assert.assertArrayEquals(ms.get(0).getBuff(), "SOme cool stuff".getBytes());
@@ -161,8 +161,8 @@ public class DatabaseTests {
         Assert.assertEquals(bchMs.get(0).getBlockHeight(), 123343);
 
         PeerDataSource pds = PeerDataSource.getInstance(mActivityRule.getActivity());
-        pds.putPeers(app, "BTC", new PeerEntity[]{new PeerEntity("someAddress".getBytes(), "somePort".getBytes(), "someTimestamp".getBytes())});
-        List<BRPeerEntity> ps = pds.getAllPeers(app, "BTC");
+        pds.putPeers(app, "SUM", new PeerEntity[]{new PeerEntity("someAddress".getBytes(), "somePort".getBytes(), "someTimestamp".getBytes())});
+        List<BRPeerEntity> ps = pds.getAllPeers(app, "SUM");
         Assert.assertNotNull(ps);
         Assert.assertEquals(ps.size(), 1);
         Assert.assertArrayEquals(ps.get(0).getAddress(), "someAddress".getBytes());
@@ -177,40 +177,40 @@ public class DatabaseTests {
         ent.code = "OMG";
         ent.name = "OmiseGo";
         ent.rate = 8.43f;
-        ent.iso = "BTC";
+        ent.iso = "SUM";
         toInsert.add(ent);
         cds.putCurrencies(app,  toInsert);
-        List<CurrencyEntity> cs = cds.getAllCurrencies(app, "BTC");
+        List<CurrencyEntity> cs = cds.getAllCurrencies(app, "SUM");
         Assert.assertNotNull(cs);
         Assert.assertEquals(cs.size(), 1);
         Assert.assertEquals(cs.get(0).name, "OmiseGo");
         Assert.assertEquals(cs.get(0).code, "OMG");
         Assert.assertEquals(cs.get(0).rate, 8.43f, 0);
 
-        // Test inserting BTC as a currency
+        // Test inserting SUM as a currency
         toInsert = new ArrayList<>();
 
-        CurrencyEntity btcEntity = new CurrencyEntity();
-        btcEntity.code = "ETH";
-        btcEntity.name = "Ether";
-        btcEntity.rate = 6f;
-        btcEntity.iso = "bch";
-        toInsert.add(btcEntity);
+        CurrencyEntity sumEntity = new CurrencyEntity();
+        sumEntity.code = "ETH";
+        sumEntity.name = "Ether";
+        sumEntity.rate = 6f;
+        sumEntity.iso = "bch";
+        toInsert.add(sumEntity);
         cds.putCurrencies(app,  toInsert);
 
-        List<CurrencyEntity> btcCurs = cds.getAllCurrencies(app, "BTC");
+        List<CurrencyEntity> sumCurs = cds.getAllCurrencies(app, "SUM");
         List<CurrencyEntity> bchCurs = cds.getAllCurrencies(app, "BCH");
-        Assert.assertNotNull(btcCurs);
+        Assert.assertNotNull(sumCurs);
         Assert.assertNotNull(bchCurs);
-        Assert.assertEquals(btcCurs.size(), 1);
+        Assert.assertEquals(sumCurs.size(), 1);
         Assert.assertEquals(bchCurs.size(), 1);
         Assert.assertEquals(bchCurs.get(0).name, "Ether");
         Assert.assertEquals(bchCurs.get(0).code, "ETH");
         Assert.assertEquals(bchCurs.get(0).rate, 6f, 0);
 
-        Assert.assertEquals(btcCurs.get(0).name, "OmiseGo");
-        Assert.assertEquals(btcCurs.get(0).code, "OMG");
-        Assert.assertEquals(btcCurs.get(0).rate, 8.43f, 0);
+        Assert.assertEquals(sumCurs.get(0).name, "OmiseGo");
+        Assert.assertEquals(sumCurs.get(0).code, "OMG");
+        Assert.assertEquals(sumCurs.get(0).rate, 8.43f, 0);
 
 
     }
@@ -225,8 +225,8 @@ public class DatabaseTests {
             Activity app = mActivityRule.getActivity();
             BtcBchTransactionDataStore tds = BtcBchTransactionDataStore.getInstance(app);
             BtcBchTransactionDataStore bchInsert = BtcBchTransactionDataStore.getInstance(app);
-            tds.putTransaction(app, "BTC", new BRTransactionEntity(new byte[0], 4321, 5674123, "some hash", "BTC"));
-            List<BRTransactionEntity> bchTxs = bchInsert.getAllTransactions(app, "BTC");
+            tds.putTransaction(app, "SUM", new BRTransactionEntity(new byte[0], 4321, 5674123, "some hash", "SUM"));
+            List<BRTransactionEntity> bchTxs = bchInsert.getAllTransactions(app, "SUM");
             Assert.assertNotNull(bchTxs);
             Assert.assertEquals(bchTxs.size(), 1);
             Assert.assertArrayEquals(bchTxs.get(0).getBuff(), new byte[0]);
@@ -252,18 +252,18 @@ public class DatabaseTests {
             @Override
             public void run() {
                 BtcBchTransactionDataStore tds = BtcBchTransactionDataStore.getInstance(app);
-                tds.putTransaction(app, "BTC", new BRTransactionEntity(new byte[0], 1989, 00112233, "first", "BTC"));
+                tds.putTransaction(app, "SUM", new BRTransactionEntity(new byte[0], 1989, 00112233, "first", "SUM"));
                 done();
             }
         });
 
 
         BtcBchTransactionDataStore tds2 = BtcBchTransactionDataStore.getInstance(app);
-        tds2.putTransaction(app, "BTC", new BRTransactionEntity(new byte[1], 1990, 11223344, "second", "BTC"));
+        tds2.putTransaction(app, "SUM", new BRTransactionEntity(new byte[1], 1990, 11223344, "second", "SUM"));
         done();
 
         BtcBchTransactionDataStore tds3 = BtcBchTransactionDataStore.getInstance(app);
-        tds3.putTransaction(app, "BTC", new BRTransactionEntity(new byte[2], 1991, 22334455, "third", "BTC"));
+        tds3.putTransaction(app, "SUM", new BRTransactionEntity(new byte[2], 1991, 22334455, "third", "SUM"));
         done();
 
 
@@ -279,7 +279,7 @@ public class DatabaseTests {
                 public void run() {
 
                     BtcBchTransactionDataStore tds = BtcBchTransactionDataStore.getInstance(app);
-                    tds.putTransaction(app, "BTC", new BRTransactionEntity(String.valueOf(finalI).getBytes(), finalI, finalI, String.valueOf(finalI), "BTC"));
+                    tds.putTransaction(app, "SUM", new BRTransactionEntity(String.valueOf(finalI).getBytes(), finalI, finalI, String.valueOf(finalI), "SUM"));
                     done();
                 }
             });
@@ -291,7 +291,7 @@ public class DatabaseTests {
         }
         Log.e(TAG, "testAsynchronousInserts: Done waiting!");
         BtcBchTransactionDataStore tds = BtcBchTransactionDataStore.getInstance(app);
-        List<BRTransactionEntity> txs = tds.getAllTransactions(app, "BTC");
+        List<BRTransactionEntity> txs = tds.getAllTransactions(app, "SUM");
         Assert.assertNotNull(txs);
         Assert.assertEquals(txs.size(), 1000);
 

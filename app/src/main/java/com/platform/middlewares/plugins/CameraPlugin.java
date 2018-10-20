@@ -12,14 +12,14 @@ import android.support.v4.content.ContextCompat;
 import android.util.Base64;
 import android.util.Log;
 
-import com.breadwallet.BreadApp;
-import com.breadwallet.R;
-import com.breadwallet.presenter.activities.camera.CameraActivity;
-import com.breadwallet.presenter.customviews.BRDialogView;
-import com.breadwallet.tools.animation.BRDialog;
-import com.breadwallet.tools.crypto.CryptoHelper;
-import com.breadwallet.tools.threads.executor.BRExecutor;
-import com.breadwallet.tools.util.BRConstants;
+import com.sumpay.BreadApp;
+import com.sumpay.R;
+import com.sumpay.presenter.activities.camera.CameraActivity;
+import com.sumpay.presenter.customviews.BRDialogView;
+import com.sumpay.tools.animation.BRDialog;
+import com.sumpay.tools.crypto.CryptoHelper;
+import com.sumpay.tools.threads.executor.BRExecutor;
+import com.sumpay.tools.util.BRConstants;
 import com.platform.APIClient;
 import com.platform.BRHTTPHelper;
 import com.platform.interfaces.Plugin;
@@ -47,8 +47,8 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * BreadWallet
  * <p/>
- * Created by Mihail Gutan on <mihail@breadwallet.com> 11/2/16.
- * Copyright (c) 2016 breadwallet LLC
+ * Created by Mihail Gutan on <mihail@sumpay.com> 11/2/16.
+ * Copyright (c) 2016 sumpay LLC
  * <p/>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal

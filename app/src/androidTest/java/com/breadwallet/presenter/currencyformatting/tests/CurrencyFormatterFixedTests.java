@@ -1,4 +1,4 @@
-//package com.breadwallet.presenter.currencyformatting.tests;
+//package com.sumpay.presenter.currencyformatting.tests;
 //
 //import android.test.AndroidTestCase;
 //

@@ -3,8 +3,8 @@ package com.platform.kvstore;
 /**
  * BreadWallet
  * <p/>
- * Created by Mihail Gutan <mihail@breadwallet.com> on 9/25/15.
- * Copyright (c) 2016 breadwallet LLC
+ * Created by Mihail Gutan <mihail@sumpay.com> on 9/25/15.
+ * Copyright (c) 2016 sumpay LLC
  * <p/>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -32,11 +32,11 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
-import com.breadwallet.BreadApp;
-import com.breadwallet.core.BRCoreKey;
-import com.breadwallet.tools.security.BRKeyStore;
-import com.breadwallet.tools.util.BRConstants;
-import com.breadwallet.tools.util.Utils;
+import com.sumpay.BreadApp;
+import com.sumpay.core.BRCoreKey;
+import com.sumpay.tools.security.BRKeyStore;
+import com.sumpay.tools.util.BRConstants;
+import com.sumpay.tools.util.Utils;
 import com.platform.interfaces.KVStoreAdaptor;
 import com.platform.sqlite.KVItem;
 import com.platform.sqlite.PlatformSqliteHelper;

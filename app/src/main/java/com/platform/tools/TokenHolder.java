@@ -2,15 +2,15 @@ package com.platform.tools;
 
 import android.content.Context;
 
-import com.breadwallet.tools.security.BRKeyStore;
-import com.breadwallet.tools.util.Utils;
+import com.sumpay.tools.security.BRKeyStore;
+import com.sumpay.tools.util.Utils;
 import com.platform.APIClient;
 
 /**
  * BreadWallet
  * <p/>
- * Created by Mihail Gutan on <mihail@breadwallet.com> 5/22/18.
- * Copyright (c) 2018 breadwallet LLC
+ * Created by Mihail Gutan on <mihail@sumpay.com> 5/22/18.
+ * Copyright (c) 2018 sumpay LLC
  * <p/>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal

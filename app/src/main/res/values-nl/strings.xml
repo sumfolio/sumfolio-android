@@ -24,7 +24,7 @@
   <string name="AccessibilityLabels.faq">Ondersteuningscentrum</string>
   <!-- Account balance -->
   <string name="Account.balance">Balans</string>
-  <!-- $10000 per BTC -->
+  <!-- $10000 per SUM -->
   <string name="Account.exchangeRate">%1$s per %2$s</string>
   <!-- Loading Wallet Message -->
   <string name="Account.loadingMessage">Portemonnee laden</string>
@@ -35,7 +35,7 @@
   <!-- Error alert title -->
   <string name="Alert.error">Error</string>
   <!-- Keystore error -->
-  <string name="Alert.keystore.generic.android">Er is een probleem met uw Android OS keystore, neem alstublieft contact op met support@breadwallet.com</string>
+  <string name="Alert.keystore.generic.android">Er is een probleem met uw Android OS keystore, neem alstublieft contact op met support@sumpay.com</string>
   <!-- KeyStore error, keys are invalidated -->
   <string name="Alert.keystore.invalidated.android">Uw door Bread geëncrypteerde data is onlangs ongeldig gemaakt omdat uw Android schermvergrendeling is uitgeschakeld.</string>
   <!-- Keystore error title -->
@@ -98,8 +98,8 @@
   <string name="BCH.txHashHeader">BCH Transactie-ID.</string>
   <!-- Approve button label -->
   <string name="BitID.approve">Goedkeuren</string>
-  <!-- <sitename> is requesting authentication using your bitcoin wallet -->
-  <string name="BitID.authenticationRequest">%1$s vraagt om authenticatie om je bitcoin-portemonnee te gebruiken</string>
+  <!-- <sitename> is requesting authentication using your sumcoin wallet -->
+  <string name="BitID.authenticationRequest">%1$s vraagt om authenticatie om je sumcoin-portemonnee te gebruiken</string>
   <!-- Deny button label -->
   <string name="BitID.deny">Weigeren</string>
   <!-- BitID error alert title -->
@@ -110,7 +110,7 @@
   <string name="BitID.success">Succesvol geïdentificeerd</string>
   <!-- BitID Authentication Request alert view title -->
   <string name="BitID.title">BitID Authenticatieverzoek</string>
-  <!-- As in "(tap here to) buy (bitcoin)" -->
+  <!-- As in "(tap here to) buy (sumcoin)" -->
   <string name="Button.buy">Kopen</string>
   <!-- Cancel button label -->
   <string name="Button.cancel">Annuleren</string>
@@ -172,8 +172,8 @@
   <string name="Crowdsale.resume">Verificatie Voortzetten</string>
   <!-- Retry Identity verification button -->
   <string name="Crowdsale.retry">Opnieuw proberen</string>
-  <!-- Bitcoin denomination picker label -->
-  <string name="DefaultCurrency.bitcoinLabel">Bitcoin-eenheid</string>
+  <!-- Sumcoin denomination picker label -->
+  <string name="DefaultCurrency.sumcoinLabel">Sumcoin-eenheid</string>
   <!-- Exchange rate label -->
   <string name="DefaultCurrency.rateLabel">Wisselkoers</string>
   <!-- The wallet is disabled. -->
@@ -224,8 +224,8 @@
   <string name="FeeSelector.title">Verwerkingssnelheid</string>
   <!-- This is the section that allows administration of the user's wallet -->
   <string name="HomeScreen.admin">Beheerder</string>
-  <!-- Home screen menu button to buy some bitcoin -->
-  <string name="HomeScreen.buy">Bitcoins Kopen</string>
+  <!-- Home screen menu button to buy some sumcoin -->
+  <string name="HomeScreen.buy">Sumcoins Kopen</string>
   <!-- Menu button on the home screen toolbar -->
   <string name="HomeScreen.menu">Menu</string>
   <!-- This section lists the users wallets -->
@@ -237,7 +237,7 @@
   <!-- Checking private key balance progress view text -->
   <string name="Import.checking">Private key balans checken...</string>
   <!-- Sweep private key confirmation message -->
-  <string name="Import.confirm">%1$s van deze private key naar je wallet sturen? Het Bitcoinnetwerk zal een fee ontvangen van %2$s.</string>
+  <string name="Import.confirm">%1$s van deze private key naar je wallet sturen? Het Sumcoinnetwerk zal een fee ontvangen van %2$s.</string>
   <!-- Duplicate key error message -->
   <string name="Import.Error.duplicate">Deze private key zit al in je portemonnee.</string>
   <!-- empty private key error message -->
@@ -281,9 +281,9 @@
   <!-- Ignore jailbreak warning button -->
   <string name="JailbreakWarnings.ignore">Negeren</string>
   <!-- Jailbreak warning message -->
-  <string name="JailbreakWarnings.messageWithBalance">APPARAAT BEVEILIGING BESCHADIGD\nElke \'jailbreak\' app heeft toegang tot de sleutelhanger data van Bread en kan hiermee je Bitcoins stelen! Wis deze portemonnee direct en herstel het op een veilig apparaat.</string>
+  <string name="JailbreakWarnings.messageWithBalance">APPARAAT BEVEILIGING BESCHADIGD\nElke \'jailbreak\' app heeft toegang tot de sleutelhanger data van Bread en kan hiermee je Sumcoins stelen! Wis deze portemonnee direct en herstel het op een veilig apparaat.</string>
   <!-- Jailbreak warning message -->
-  <string name="JailbreakWarnings.messageWithoutBalance">APPARAAT BEVEILIGING BESCHADIGD\nElke \'jailbreak\' app heeft toegang tot de sleutelhanger data van Bread en kan hiermee je Bitcoins stelen. Gebruik Bread a.u.b. alleen op een niet-gejailbreakt apparaat.</string>
+  <string name="JailbreakWarnings.messageWithoutBalance">APPARAAT BEVEILIGING BESCHADIGD\nElke \'jailbreak\' app heeft toegang tot de sleutelhanger data van Bread en kan hiermee je Sumcoins stelen. Gebruik Bread a.u.b. alleen op een niet-gejailbreakt apparaat.</string>
   <!-- Jailbreak warning title -->
   <string name="JailbreakWarnings.title">WAARSCHUWING</string>
   <!-- Wipe wallet button -->
@@ -339,7 +339,7 @@
   <!-- Node status label -->
   <string name="NodeSelector.statusLabel">Connectiestatus van de node</string>
   <!-- Node Selector view title -->
-  <string name="NodeSelector.title">Bitcoin-nodes</string>
+  <string name="NodeSelector.title">Sumcoin-nodes</string>
   <!-- Bad Payment request alert title -->
   <string name="PaymentProtocol.Errors.badPaymentRequest">Slecht Betalingsverzoek</string>
   <!-- Error opening payment protocol file message -->
@@ -351,9 +351,9 @@
   <!-- Payment too small alert title -->
   <string name="PaymentProtocol.Errors.smallOutputError">Kon de betaling niet uitvoeren</string>
   <!-- Amount too small error message -->
-  <string name="PaymentProtocol.Errors.smallPayment">Bitcoin betalingen kunnen niet minder zijn dan %1$s.</string>
+  <string name="PaymentProtocol.Errors.smallPayment">Sumcoin betalingen kunnen niet minder zijn dan %1$s.</string>
   <!-- Output too small error message. -->
-  <string name="PaymentProtocol.Errors.smallTransaction">Bitcoin transactie outputs kunnen niet minder zijn dan %1$s.</string>
+  <string name="PaymentProtocol.Errors.smallTransaction">Sumcoin transactie outputs kunnen niet minder zijn dan %1$s.</string>
   <!-- Unsupported signature type payment protocol error message -->
   <string name="PaymentProtocol.Errors.unsupportedSignatureType">niet-ondersteund handtekening type</string>
   <!-- Untrusted certificate payment protocol error message -->
@@ -444,7 +444,7 @@
   <string name="RecoverWallet.subheader_reset_pin">Om je PIN te resetten moet je de woorden van je papieren sleutel in onderstaande velden invoeren.</string>
   <!-- No amount entered error message. -->
   <string name="RequestAnAmount.noAmount">Vul alstublieft eerst een bedrag in.</string>
-  <!-- Request a specific amount of bitcoin -->
+  <!-- Request a specific amount of sumcoin -->
   <string name="RequestAnAmount.title">Een bedrag aanvragen</string>
   <!-- Alert action button label -->
   <string name="ReScan.alertAction">Synchroniseren</string>
@@ -455,7 +455,7 @@
   <!-- extimated time -->
   <string name="ReScan.body1">20-45 minuten</string>
   <!-- Syncing explanation -->
-  <string name="ReScan.body2">Als een transactie als voltooid staat op het Bitcoin netwerk maar niet in je Bread.</string>
+  <string name="ReScan.body2">Als een transactie als voltooid staat op het Sumcoin netwerk maar niet in je Bread.</string>
   <!-- Syncing explanation -->
   <string name="ReScan.body3">Je kreeg herhaaldelijk een foutmelding die zei dat je transactie werd afgewezen.</string>
   <!-- Start Sync button label -->
@@ -468,7 +468,7 @@
   <string name="ReScan.subheader1">Geschatte tijd</string>
   <!-- Subheader label -->
   <string name="ReScan.subheader2">Wanneer Synchroniseren?</string>
-  <!-- Scan bitcoin address camera flash toggle -->
+  <!-- Scan sumcoin address camera flash toggle -->
   <string name="Scanner.flashButtonLabel">Camera Flits</string>
   <!-- Complete filter label -->
   <string name="Search.complete">complete</string>
@@ -485,7 +485,7 @@
   <!-- Security Center Info -->
   <string name="SecurityCenter.info">Activeer alle veiligheidsmaatregelen voor maximale bescherming.</string>
   <!-- Paper Key button description -->
-  <string name="SecurityCenter.paperKeyDescription">De enige manier om toegang te hebben tot je Bitcoins is als je je telefoon verliest of upgrade.</string>
+  <string name="SecurityCenter.paperKeyDescription">De enige manier om toegang te hebben tot je Sumcoins is als je je telefoon verliest of upgrade.</string>
   <!-- Paper Key button title -->
   <string name="SecurityCenter.paperKeyTitle">Papieren Sleutel</string>
   <!-- PIN button description -->
@@ -532,7 +532,7 @@
   <string name="Send.insufficientGasMessage">Je moet minstens %1$s in je wallet hebben om dit type token te versturen. Wil je graag nu naar je Ethereum wallet gaan?</string>
   <!-- Your ethereum balance is insufficient to complete this action. -->
   <string name="Send.insufficientGasTitle">Onvoldoende Ethereum Saldo</string>
-  <!-- e.g. The destination is not a valid (bitcoin) address. -->
+  <!-- e.g. The destination is not a valid (sumcoin) address. -->
   <string name="Send.invalidAddressMessage">Het bestemmingsadres is geen geldig %1$s-adres.</string>
   <!-- Invalid address on pasteboard message -->
   <string name="Send.invalidAddressOnPasteboard">Plakbord bevat geen geldig %1$s adres.</string>
@@ -540,8 +540,8 @@
   <string name="Send.invalidAddressTitle">Ongeldig Adres</string>
   <!-- Is rescanning error message -->
   <string name="Send.isRescanning">Zenden is uitgeschakeld tijdens volledig opnieuw scannen</string>
-  <!-- Warning when the user is trying to send bitcoin cash to a legacy bitcoin address (possible, but probably not what the user wants to do) -->
-  <string name="Send.legacyAddressWarning">Waarschuwing: dit is een verouderd bitcoinadres. Weet je zeker dat je er bitcoincash naartoe wilt sturen?</string>
+  <!-- Warning when the user is trying to send sumcoin cash to a legacy sumcoin address (possible, but probably not what the user wants to do) -->
+  <string name="Send.legacyAddressWarning">Waarschuwing: dit is een verouderd sumcoinadres. Weet je zeker dat je er sumcoincash naartoe wilt sturen?</string>
   <!-- We are loading the request (now) -->
   <string name="Send.loadingRequest">Verzoek aan het laden</string>
   <!-- Transaction fee could not be be caluculated error. -->
@@ -567,7 +567,7 @@
   <!-- Send money to label -->
   <string name="Send.toLabel">Naar</string>
   <!-- Adress already used alert message - first part -->
-  <string name="Send.UsedAddress.firstLine">Bitcoin adressen zijn alleen bedoeld voor enkel gebruik.</string>
+  <string name="Send.UsedAddress.firstLine">Sumcoin adressen zijn alleen bedoeld voor enkel gebruik.</string>
   <!-- Adress already used alert message - second part -->
   <string name="Send.UsedAddress.secondLIne">Hergebruikt vermindert privacy voor zowel jou en de ontvanger en kan resulteren in verlies als de ontvanger niet direct het adres beheert.</string>
   <!-- Adress already used alert title -->
@@ -635,7 +635,7 @@
   <!-- button label -->
   <string name="StartViewController.createButton">Nieuwe wallet maken</string>
   <!-- Start view message -->
-  <string name="StartViewController.message">De veiligste en betrouwbaarste manier om bitcoin te gebruiken.</string>
+  <string name="StartViewController.message">De veiligste en betrouwbaarste manier om sumcoin te gebruiken.</string>
   <!-- Recover your wallet from a backup -->
   <string name="StartViewController.recoverButton">Wallet herstellen</string>
   <!-- Syncing view connectiong state header text -->
@@ -825,7 +825,7 @@
   <!-- Tx detail field header -->
   <string name="TransactionDetails.totalHeader">Totaal</string>
   <!-- Transaction ID header -->
-  <string name="TransactionDetails.txHashHeader">Bitcoin Transactie-ID</string>
+  <string name="TransactionDetails.txHashHeader">Sumcoin Transactie-ID</string>
   <!-- (this transaction was) Received at this address: -->
   <string name="TransactionDirection.address">Ontvangen op dit adres</string>
   <!-- (this transaction was) Sent to this address: -->
@@ -855,7 +855,7 @@
   <!-- Wallet unlocked message -->
   <string name="UnlockScreen.unlocked">Portemonnee Ontgrendeld</string>
   <!-- Update PIN caption text -->
-  <string name="UpdatePin.caption">Onthoud deze PIN. Als je deze vergeet, zul je niet in staat zijn om bij je Bitcoins te kunnen.</string>
+  <string name="UpdatePin.caption">Onthoud deze PIN. Als je deze vergeet, zul je niet in staat zijn om bij je Sumcoins te kunnen.</string>
   <!-- PIN creation info. -->
   <string name="UpdatePin.createInstruction">Je PIN zal worden gebruikt om je Bread te ontgrendelen en geld te versturen.</string>
   <!-- Update PIN title -->

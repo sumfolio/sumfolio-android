@@ -1,12 +1,12 @@
-package com.breadwallet.screenshots;
+package com.sumpay.screenshots;
 
 import android.os.Build;
 import android.support.test.espresso.Espresso;
 import android.support.test.espresso.IdlingPolicies;
 import android.support.test.rule.ActivityTestRule;
 
-import com.breadwallet.R;
-import com.breadwallet.presenter.activities.settings.TestActivity;
+import com.sumpay.R;
+import com.sumpay.presenter.activities.settings.TestActivity;
 
 import org.junit.After;
 import org.junit.Before;
@@ -36,8 +36,8 @@ import tools.fastlane.screengrab.locale.LocaleUtil;
 /**
  * BreadWallet
  * <p/>
- * Created by Mihail Gutan on <mihail@breadwallet.com> 10/31/17.
- * Copyright (c) 2017 breadwallet LLC
+ * Created by Mihail Gutan on <mihail@sumpay.com> 10/31/17.
+ * Copyright (c) 2017 sumpay LLC
  * <p/>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal

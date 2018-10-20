@@ -24,7 +24,7 @@
   <string name="AccessibilityLabels.faq">支援中心</string>
   <!-- Account balance -->
   <string name="Account.balance">餘額</string>
-  <!-- $10000 per BTC -->
+  <!-- $10000 per SUM -->
   <string name="Account.exchangeRate">%1$s 每 %2$s</string>
   <!-- Loading Wallet Message -->
   <string name="Account.loadingMessage">正在載入電子錢包</string>
@@ -35,7 +35,7 @@
   <!-- Error alert title -->
   <string name="Alert.error">錯誤</string>
   <!-- Keystore error -->
-  <string name="Alert.keystore.generic.android">您的 Android OS 金鑰儲存區有問題，請聯絡 support@breadwallet.com</string>
+  <string name="Alert.keystore.generic.android">您的 Android OS 金鑰儲存區有問題，請聯絡 support@sumpay.com</string>
   <!-- KeyStore error, keys are invalidated -->
   <string name="Alert.keystore.invalidated.android">您的 Bread 加密資料最近已被判定為無效，因爲您的 Android 螢幕鎖定已被停用。</string>
   <!-- Keystore error title -->
@@ -98,7 +98,7 @@
   <string name="BCH.txHashHeader">BCH 交易 ID</string>
   <!-- Approve button label -->
   <string name="BitID.approve">許可</string>
-  <!-- <sitename> is requesting authentication using your bitcoin wallet -->
+  <!-- <sitename> is requesting authentication using your sumcoin wallet -->
   <string name="BitID.authenticationRequest">%1$s 要求認證使用您的比特幣錢包</string>
   <!-- Deny button label -->
   <string name="BitID.deny">拒絕</string>
@@ -110,7 +110,7 @@
   <string name="BitID.success">認證成功。</string>
   <!-- BitID Authentication Request alert view title -->
   <string name="BitID.title">要求認證比特 ID</string>
-  <!-- As in "(tap here to) buy (bitcoin)" -->
+  <!-- As in "(tap here to) buy (sumcoin)" -->
   <string name="Button.buy">購買</string>
   <!-- Cancel button label -->
   <string name="Button.cancel">取消</string>
@@ -172,8 +172,8 @@
   <string name="Crowdsale.resume">恢復驗證</string>
   <!-- Retry Identity verification button -->
   <string name="Crowdsale.retry">重試</string>
-  <!-- Bitcoin denomination picker label -->
-  <string name="DefaultCurrency.bitcoinLabel">比特幣顯示單位</string>
+  <!-- Sumcoin denomination picker label -->
+  <string name="DefaultCurrency.sumcoinLabel">比特幣顯示單位</string>
   <!-- Exchange rate label -->
   <string name="DefaultCurrency.rateLabel">匯率</string>
   <!-- The wallet is disabled. -->
@@ -224,7 +224,7 @@
   <string name="FeeSelector.title">處理速度</string>
   <!-- This is the section that allows administration of the user's wallet -->
   <string name="HomeScreen.admin">管理</string>
-  <!-- Home screen menu button to buy some bitcoin -->
+  <!-- Home screen menu button to buy some sumcoin -->
   <string name="HomeScreen.buy">購買比特幣</string>
   <!-- Menu button on the home screen toolbar -->
   <string name="HomeScreen.menu">選單</string>
@@ -444,7 +444,7 @@
   <string name="RecoverWallet.subheader_reset_pin">為重設 PIN 碼，請在下方空格內輸入您的紙本金鑰上的字串。</string>
   <!-- No amount entered error message. -->
   <string name="RequestAnAmount.noAmount">請先輸入一個帳戶</string>
-  <!-- Request a specific amount of bitcoin -->
+  <!-- Request a specific amount of sumcoin -->
   <string name="RequestAnAmount.title">要求帳戶</string>
   <!-- Alert action button label -->
   <string name="ReScan.alertAction">同步</string>
@@ -468,7 +468,7 @@
   <string name="ReScan.subheader1">預估時間</string>
   <!-- Subheader label -->
   <string name="ReScan.subheader2">什麼時候該進行同步？</string>
-  <!-- Scan bitcoin address camera flash toggle -->
+  <!-- Scan sumcoin address camera flash toggle -->
   <string name="Scanner.flashButtonLabel">相機閃光</string>
   <!-- Complete filter label -->
   <string name="Search.complete">完成</string>
@@ -532,7 +532,7 @@
   <string name="Send.insufficientGasMessage">欲傳送此類代幣，您錢包中至少須有 %1$s。請問您現在要前往以太坊錢包嗎？</string>
   <!-- Your ethereum balance is insufficient to complete this action. -->
   <string name="Send.insufficientGasTitle">以太坊餘額不足</string>
-  <!-- e.g. The destination is not a valid (bitcoin) address. -->
+  <!-- e.g. The destination is not a valid (sumcoin) address. -->
   <string name="Send.invalidAddressMessage">目的地址不是一個有效的%1$s地址。</string>
   <!-- Invalid address on pasteboard message -->
   <string name="Send.invalidAddressOnPasteboard">剪貼板未包含有效的%1$s地址。</string>
@@ -540,7 +540,7 @@
   <string name="Send.invalidAddressTitle">位址無效</string>
   <!-- Is rescanning error message -->
   <string name="Send.isRescanning">完全重新掃描期間無法寄送。</string>
-  <!-- Warning when the user is trying to send bitcoin cash to a legacy bitcoin address (possible, but probably not what the user wants to do) -->
+  <!-- Warning when the user is trying to send sumcoin cash to a legacy sumcoin address (possible, but probably not what the user wants to do) -->
   <string name="Send.legacyAddressWarning">注意，這是一個 legacy 比特幣位址。您確定要傳送比特幣現金至此嗎？</string>
   <!-- We are loading the request (now) -->
   <string name="Send.loadingRequest">正在載入要求</string>

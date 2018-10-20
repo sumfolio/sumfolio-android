@@ -1,7 +1,7 @@
 package com.platform;
 
 
-import com.breadwallet.tools.util.Utils;
+import com.sumpay.tools.util.Utils;
 
 import org.apache.commons.io.IOUtils;
 import org.eclipse.jetty.server.Request;
@@ -15,8 +15,8 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * BreadWallet
  * <p/>
- * Created by Mihail Gutan on <mihail@breadwallet.com> 2/16/17.
- * Copyright (c) 2017 breadwallet LLC
+ * Created by Mihail Gutan on <mihail@sumpay.com> 2/16/17.
+ * Copyright (c) 2017 sumpay LLC
  * <p/>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal

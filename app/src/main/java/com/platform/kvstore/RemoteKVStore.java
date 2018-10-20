@@ -2,7 +2,7 @@ package com.platform.kvstore;
 
 import android.util.Log;
 
-import com.breadwallet.tools.util.Utils;
+import com.sumpay.tools.util.Utils;
 import com.platform.APIClient;
 import com.platform.interfaces.KVStoreAdaptor;
 import com.platform.sqlite.KVItem;
@@ -21,8 +21,8 @@ import static com.platform.kvstore.CompletionObject.RemoteKVStoreError.unknown;
 /**
  * BreadWallet
  * <p/>
- * Created by Mihail Gutan on <mihail@breadwallet.com> 11/13/16.
- * Copyright (c) 2016 breadwallet LLC
+ * Created by Mihail Gutan on <mihail@sumpay.com> 11/13/16.
+ * Copyright (c) 2016 sumpay LLC
  * <p/>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal

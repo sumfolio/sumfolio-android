@@ -24,7 +24,7 @@
   <string name="AccessibilityLabels.faq">고객지원 센터</string>
   <!-- Account balance -->
   <string name="Account.balance">잔액</string>
-  <!-- $10000 per BTC -->
+  <!-- $10000 per SUM -->
   <string name="Account.exchangeRate">%2$s 당 %1$s</string>
   <!-- Loading Wallet Message -->
   <string name="Account.loadingMessage">지갑 로딩</string>
@@ -35,7 +35,7 @@
   <!-- Error alert title -->
   <string name="Alert.error">오류</string>
   <!-- Keystore error -->
-  <string name="Alert.keystore.generic.android">귀하의 안드로이드 OS 키스토어에 문제가 있습니다, support@breadwallet.com로 연락해 주세요</string>
+  <string name="Alert.keystore.generic.android">귀하의 안드로이드 OS 키스토어에 문제가 있습니다, support@sumpay.com로 연락해 주세요</string>
   <!-- KeyStore error, keys are invalidated -->
   <string name="Alert.keystore.invalidated.android">귀하의 안드로이드 잠금 화면이 꺼져서 귀하의 암호화 된 데이터가 최근 무효화 되었습니다.</string>
   <!-- Keystore error title -->
@@ -98,7 +98,7 @@
   <string name="BCH.txHashHeader">BCH Transaction ID</string>
   <!-- Approve button label -->
   <string name="BitID.approve">승인</string>
-  <!-- <sitename> is requesting authentication using your bitcoin wallet -->
+  <!-- <sitename> is requesting authentication using your sumcoin wallet -->
   <string name="BitID.authenticationRequest">%1$s(이)가 귀하의 비트코인 월렛 이용에 대한 인증을 요청하고 있습니다.</string>
   <!-- Deny button label -->
   <string name="BitID.deny">거부</string>
@@ -110,7 +110,7 @@
   <string name="BitID.success">성공적으로 인증됨</string>
   <!-- BitID Authentication Request alert view title -->
   <string name="BitID.title">BitID 인증 요청</string>
-  <!-- As in "(tap here to) buy (bitcoin)" -->
+  <!-- As in "(tap here to) buy (sumcoin)" -->
   <string name="Button.buy">구매하기</string>
   <!-- Cancel button label -->
   <string name="Button.cancel">취소</string>
@@ -172,8 +172,8 @@
   <string name="Crowdsale.resume">인증 다시 하기</string>
   <!-- Retry Identity verification button -->
   <string name="Crowdsale.retry">다시 시도하기</string>
-  <!-- Bitcoin denomination picker label -->
-  <string name="DefaultCurrency.bitcoinLabel">Bitcoin Display Unit</string>
+  <!-- Sumcoin denomination picker label -->
+  <string name="DefaultCurrency.sumcoinLabel">Sumcoin Display Unit</string>
   <!-- Exchange rate label -->
   <string name="DefaultCurrency.rateLabel">환율</string>
   <!-- The wallet is disabled. -->
@@ -224,7 +224,7 @@
   <string name="FeeSelector.title">처리 속도</string>
   <!-- This is the section that allows administration of the user's wallet -->
   <string name="HomeScreen.admin">관리</string>
-  <!-- Home screen menu button to buy some bitcoin -->
+  <!-- Home screen menu button to buy some sumcoin -->
   <string name="HomeScreen.buy">비트코인 구매</string>
   <!-- Menu button on the home screen toolbar -->
   <string name="HomeScreen.menu">메뉴</string>
@@ -444,7 +444,7 @@
   <string name="RecoverWallet.subheader_reset_pin">PIN을 재설정하려면, 페이퍼 키의 단어들을 아래 상자에 입력해 주세요.</string>
   <!-- No amount entered error message. -->
   <string name="RequestAnAmount.noAmount">먼저 금액을 입력해 주세요.</string>
-  <!-- Request a specific amount of bitcoin -->
+  <!-- Request a specific amount of sumcoin -->
   <string name="RequestAnAmount.title">금액 요청</string>
   <!-- Alert action button label -->
   <string name="ReScan.alertAction">동기화</string>
@@ -468,7 +468,7 @@
   <string name="ReScan.subheader1">예상 시간</string>
   <!-- Subheader label -->
   <string name="ReScan.subheader2">동기화는 언제 해야 합니까?</string>
-  <!-- Scan bitcoin address camera flash toggle -->
+  <!-- Scan sumcoin address camera flash toggle -->
   <string name="Scanner.flashButtonLabel">카메라 플래시</string>
   <!-- Complete filter label -->
   <string name="Search.complete">완료</string>
@@ -532,7 +532,7 @@
   <string name="Send.insufficientGasMessage">이 종류의 토큰을 전송하려면 지갑에 최소 %1$s가 있어야 합니다. 지금 이더리움 지갑으로 가시겠습니까?</string>
   <!-- Your ethereum balance is insufficient to complete this action. -->
   <string name="Send.insufficientGasTitle">이더리움 잔액이 부족합니다</string>
-  <!-- e.g. The destination is not a valid (bitcoin) address. -->
+  <!-- e.g. The destination is not a valid (sumcoin) address. -->
   <string name="Send.invalidAddressMessage">해당 수취인 주소는 %1$s에서 유효하지 않은 주소입니다.</string>
   <!-- Invalid address on pasteboard message -->
   <string name="Send.invalidAddressOnPasteboard">클립보드가 유효한 %1$s 주소를 가지고 있지 않습니다</string>
@@ -540,7 +540,7 @@
   <string name="Send.invalidAddressTitle">유효하지 않은 주소입니다</string>
   <!-- Is rescanning error message -->
   <string name="Send.isRescanning">전체 재검색 중에는 송금이 비활성화됩니다.</string>
-  <!-- Warning when the user is trying to send bitcoin cash to a legacy bitcoin address (possible, but probably not what the user wants to do) -->
+  <!-- Warning when the user is trying to send sumcoin cash to a legacy sumcoin address (possible, but probably not what the user wants to do) -->
   <string name="Send.legacyAddressWarning">경고: 이것은 레거시 비트코인 주소입니다. 비트코인 캐시를 보내시겠습니까?</string>
   <!-- We are loading the request (now) -->
   <string name="Send.loadingRequest">요청 불러오는 중</string>
@@ -825,7 +825,7 @@
   <!-- Tx detail field header -->
   <string name="TransactionDetails.totalHeader">합계</string>
   <!-- Transaction ID header -->
-  <string name="TransactionDetails.txHashHeader">Bitcoin Transaction ID</string>
+  <string name="TransactionDetails.txHashHeader">Sumcoin Transaction ID</string>
   <!-- (this transaction was) Received at this address: -->
   <string name="TransactionDirection.address">이 주소에서 받음</string>
   <!-- (this transaction was) Sent to this address: -->

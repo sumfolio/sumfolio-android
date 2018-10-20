@@ -4,18 +4,18 @@
 # Sumfolio for Android
 
 [![download](/images/icon-google-play.png)]
-(https://play.google.com/store/apps/details?id=com.breadwallet)
+(https://play.google.com/store/apps/details?id=com.sumpay)
 
 ## Sumcoin Wallet
 
-This is the Android port of the breadwallet iOS app, which can be found [here](https://github.com/breadwallet/breadwallet/).
+This is the Android port of the sumpay iOS app, which can be found [here](https://github.com/sumpay/sumpay/).
 
 ## A completely standalone sumcoin wallet:
 
 **Sumfolio** is a real standalone sumcoin client. There is no server to get hacked or go down, so you can always access
 your money. 
 
-Using [SPV](https://en.bitcoin.it/wiki/Thin_Client_Security#Header-Only_Clients)
+Using [SPV](https://en.sumcoin.it/wiki/Thin_Client_Security#Header-Only_Clients)
 mode, **Sumfolio** connects directly to the **Sumcoin** network with the fast
 performance you need on a mobile device.
 
@@ -28,17 +28,17 @@ performance you need on a mobile device.
 
 Simplicity is **Sumfolio's** core design principle. A simple backup phrase is
 all you need to restore your wallet on another device if yours is ever lost or
-broken.  Because **Sumfolio** is [deterministic](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki),
+broken.  Because **Sumfolio** is [deterministic](https://github.com/sumcoin/bips/blob/master/bip-0032.mediawiki),
 your balance and transaction history can be recovered from just your backup phrase.
 
 ## Features:
 
-- ["simplified payment verification"](https://github.com/bitcoin/bips/blob/master/bip-0037.mediawiki) for fast mobile performance
+- ["simplified payment verification"](https://github.com/sumcoin/bips/blob/master/bip-0037.mediawiki) for fast mobile performance
 - no server to get hacked or go down
 - single backup phrase that works forever
 - private keys never leave your device
-- import [password protected](https://github.com/bitcoin/bips/blob/master/bip-0038.mediawiki) paper wallets
-- ["payment protocol"](https://github.com/bitcoin/bips/blob/master/bip-0070.mediawiki) payee identity certification
+- import [password protected](https://github.com/sumcoin/bips/blob/master/bip-0038.mediawiki) paper wallets
+- ["payment protocol"](https://github.com/sumcoin/bips/blob/master/bip-0070.mediawiki) payee identity certification
 
 ## How to set up the development environment:
 1. Download and install Java 7 or up

@@ -14,8 +14,8 @@ import java.io.IOException;
 /**
  * BreadWallet
  * <p/>
- * Created by Mihail Gutan on <mihail@breadwallet.com> 1/19/17.
- * Copyright (c) 2017 breadwallet LLC
+ * Created by Mihail Gutan on <mihail@sumpay.com> 1/19/17.
+ * Copyright (c) 2017 sumpay LLC
  * <p/>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal

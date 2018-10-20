@@ -24,7 +24,7 @@
   <string name="AccessibilityLabels.faq">Support Center</string>
   <!-- Account balance -->
   <string name="Account.balance">Saldo</string>
-  <!-- $10000 per BTC -->
+  <!-- $10000 per SUM -->
   <string name="Account.exchangeRate">%1$s per %2$s</string>
   <!-- Loading Wallet Message -->
   <string name="Account.loadingMessage">Laddar plånbok</string>
@@ -35,7 +35,7 @@
   <!-- Error alert title -->
   <string name="Alert.error">Fel</string>
   <!-- Keystore error -->
-  <string name="Alert.keystore.generic.android">Det har uppstått ett problem med KeyStore till Android OS. Kontakta support@breadwallet.com</string>
+  <string name="Alert.keystore.generic.android">Det har uppstått ett problem med KeyStore till Android OS. Kontakta support@sumpay.com</string>
   <!-- KeyStore error, keys are invalidated -->
   <string name="Alert.keystore.invalidated.android">Dina krypterade Bread-uppgifter har nyligen ogiltigförklarats på grund av att Androids skärmlås inaktiverades.</string>
   <!-- Keystore error title -->
@@ -98,8 +98,8 @@
   <string name="BCH.txHashHeader">BCH transaktions-ID</string>
   <!-- Approve button label -->
   <string name="BitID.approve">Godkänn</string>
-  <!-- <sitename> is requesting authentication using your bitcoin wallet -->
-  <string name="BitID.authenticationRequest">%1$s begär autentisering med hjälp av din bitcoin-plånbok</string>
+  <!-- <sitename> is requesting authentication using your sumcoin wallet -->
+  <string name="BitID.authenticationRequest">%1$s begär autentisering med hjälp av din sumcoin-plånbok</string>
   <!-- Deny button label -->
   <string name="BitID.deny">Avslå</string>
   <!-- BitID error alert title -->
@@ -110,7 +110,7 @@
   <string name="BitID.success">Autentiseringen lyckades</string>
   <!-- BitID Authentication Request alert view title -->
   <string name="BitID.title">BitId autentiseringsförfrågan</string>
-  <!-- As in "(tap here to) buy (bitcoin)" -->
+  <!-- As in "(tap here to) buy (sumcoin)" -->
   <string name="Button.buy">Köp</string>
   <!-- Cancel button label -->
   <string name="Button.cancel">Avbryt</string>
@@ -172,8 +172,8 @@
   <string name="Crowdsale.resume">Återuppta verifikation</string>
   <!-- Retry Identity verification button -->
   <string name="Crowdsale.retry">Försök igen</string>
-  <!-- Bitcoin denomination picker label -->
-  <string name="DefaultCurrency.bitcoinLabel">Bitcoin visningsenhet</string>
+  <!-- Sumcoin denomination picker label -->
+  <string name="DefaultCurrency.sumcoinLabel">Sumcoin visningsenhet</string>
   <!-- Exchange rate label -->
   <string name="DefaultCurrency.rateLabel">Växelkurs</string>
   <!-- The wallet is disabled. -->
@@ -224,8 +224,8 @@
   <string name="FeeSelector.title">Bearbetningshastighet</string>
   <!-- This is the section that allows administration of the user's wallet -->
   <string name="HomeScreen.admin">Admin</string>
-  <!-- Home screen menu button to buy some bitcoin -->
-  <string name="HomeScreen.buy">Köp Bitcoin</string>
+  <!-- Home screen menu button to buy some sumcoin -->
+  <string name="HomeScreen.buy">Köp Sumcoin</string>
   <!-- Menu button on the home screen toolbar -->
   <string name="HomeScreen.menu">Meny</string>
   <!-- This section lists the users wallets -->
@@ -237,7 +237,7 @@
   <!-- Checking private key balance progress view text -->
   <string name="Import.checking">Kontrollerar privat nyckelsaldo...</string>
   <!-- Sweep private key confirmation message -->
-  <string name="Import.confirm">Skicka %1$s från denna privata nyckel till din plånbok? Bitcoins nätverk tar en avgift på %2$s.</string>
+  <string name="Import.confirm">Skicka %1$s från denna privata nyckel till din plånbok? Sumcoins nätverk tar en avgift på %2$s.</string>
   <!-- Duplicate key error message -->
   <string name="Import.Error.duplicate">Denna privata nyckel finns redan i din plånbok.</string>
   <!-- empty private key error message -->
@@ -281,9 +281,9 @@
   <!-- Ignore jailbreak warning button -->
   <string name="JailbreakWarnings.ignore">Ignorera</string>
   <!-- Jailbreak warning message -->
-  <string name="JailbreakWarnings.messageWithBalance">ENHETENS SÄKERHET ÄR ÄVENTYRAD\nEn \"intrångs\"-app kan få tillgång till Breads nyckeldata och stjäla dina bitcoin! Töm denna plånbok direkt och återställ den på en säker enhet.</string>
+  <string name="JailbreakWarnings.messageWithBalance">ENHETENS SÄKERHET ÄR ÄVENTYRAD\nEn \"intrångs\"-app kan få tillgång till Breads nyckeldata och stjäla dina sumcoin! Töm denna plånbok direkt och återställ den på en säker enhet.</string>
   <!-- Jailbreak warning message -->
-  <string name="JailbreakWarnings.messageWithoutBalance">ENHETENS SÄKERHET ÄR ÄVENTYRAD\nEn \"intrångs\"-app kan få tillgång till Breads nyckeldata och stjäla dina bitcoin! Använd Bread endast på en säker enhet.</string>
+  <string name="JailbreakWarnings.messageWithoutBalance">ENHETENS SÄKERHET ÄR ÄVENTYRAD\nEn \"intrångs\"-app kan få tillgång till Breads nyckeldata och stjäla dina sumcoin! Använd Bread endast på en säker enhet.</string>
   <!-- Jailbreak warning title -->
   <string name="JailbreakWarnings.title">VARNING</string>
   <!-- Wipe wallet button -->
@@ -339,7 +339,7 @@
   <!-- Node status label -->
   <string name="NodeSelector.statusLabel">Nodens anslutningsstatus</string>
   <!-- Node Selector view title -->
-  <string name="NodeSelector.title">Bitcoin-noder</string>
+  <string name="NodeSelector.title">Sumcoin-noder</string>
   <!-- Bad Payment request alert title -->
   <string name="PaymentProtocol.Errors.badPaymentRequest">Felaktig utbetalningsbegäran</string>
   <!-- Error opening payment protocol file message -->
@@ -351,9 +351,9 @@
   <!-- Payment too small alert title -->
   <string name="PaymentProtocol.Errors.smallOutputError">Kunde inte göra utbetalning</string>
   <!-- Amount too small error message -->
-  <string name="PaymentProtocol.Errors.smallPayment">Utbetalning av Bitcoin får inte vara lägre än %1$s.</string>
+  <string name="PaymentProtocol.Errors.smallPayment">Utbetalning av Sumcoin får inte vara lägre än %1$s.</string>
   <!-- Output too small error message. -->
-  <string name="PaymentProtocol.Errors.smallTransaction">Utbetalningstransaktioner av Bitcoin får inte vara lägre än %1$s.</string>
+  <string name="PaymentProtocol.Errors.smallTransaction">Utbetalningstransaktioner av Sumcoin får inte vara lägre än %1$s.</string>
   <!-- Unsupported signature type payment protocol error message -->
   <string name="PaymentProtocol.Errors.unsupportedSignatureType">signaturtypen saknar stöd</string>
   <!-- Untrusted certificate payment protocol error message -->
@@ -444,7 +444,7 @@
   <string name="RecoverWallet.subheader_reset_pin">För att återställa din PIN-kod anger du orden från din ordnyckel i boxarna nedan.</string>
   <!-- No amount entered error message. -->
   <string name="RequestAnAmount.noAmount">Var god ange ett belopp först.</string>
-  <!-- Request a specific amount of bitcoin -->
+  <!-- Request a specific amount of sumcoin -->
   <string name="RequestAnAmount.title">Begär ett belopp</string>
   <!-- Alert action button label -->
   <string name="ReScan.alertAction">Synka</string>
@@ -455,7 +455,7 @@
   <!-- extimated time -->
   <string name="ReScan.body1">20-45 minuter</string>
   <!-- Syncing explanation -->
-  <string name="ReScan.body2">Om en transaktion visar sig som klar i bitcoins nätverk men inte i Bread.</string>
+  <string name="ReScan.body2">Om en transaktion visar sig som klar i sumcoins nätverk men inte i Bread.</string>
   <!-- Syncing explanation -->
   <string name="ReScan.body3">Du får gång på gång ett meddelande som säger att din transaktion avvisades.</string>
   <!-- Start Sync button label -->
@@ -468,7 +468,7 @@
   <string name="ReScan.subheader1">Uppskattad tid</string>
   <!-- Subheader label -->
   <string name="ReScan.subheader2">När ska man synka?</string>
-  <!-- Scan bitcoin address camera flash toggle -->
+  <!-- Scan sumcoin address camera flash toggle -->
   <string name="Scanner.flashButtonLabel">Kamerablixt</string>
   <!-- Complete filter label -->
   <string name="Search.complete">avsluta</string>
@@ -485,7 +485,7 @@
   <!-- Security Center Info -->
   <string name="SecurityCenter.info">Aktivera alla säkerhetsfunktioner för maximal säkerhet.</string>
   <!-- Paper Key button description -->
-  <string name="SecurityCenter.paperKeyDescription">Det enda sättet att komma åt dina bitcoin om du förlorar eller uppgraderar din telefon.</string>
+  <string name="SecurityCenter.paperKeyDescription">Det enda sättet att komma åt dina sumcoin om du förlorar eller uppgraderar din telefon.</string>
   <!-- Paper Key button title -->
   <string name="SecurityCenter.paperKeyTitle">Ordnyckel</string>
   <!-- PIN button description -->
@@ -532,7 +532,7 @@
   <string name="Send.insufficientGasMessage">Du måste ha minst %1$s i din plånbok för att överföra denna typ av token. Vill du gå till din Ethereum-plånbok nu?</string>
   <!-- Your ethereum balance is insufficient to complete this action. -->
   <string name="Send.insufficientGasTitle">För lågt Ethereum-saldo</string>
-  <!-- e.g. The destination is not a valid (bitcoin) address. -->
+  <!-- e.g. The destination is not a valid (sumcoin) address. -->
   <string name="Send.invalidAddressMessage">Mottagaradressen är inte en giltig %1$s-adress.</string>
   <!-- Invalid address on pasteboard message -->
   <string name="Send.invalidAddressOnPasteboard">Urklipp innehåller inte en giltig %1$s-adress.</string>
@@ -540,8 +540,8 @@
   <string name="Send.invalidAddressTitle">Ogiltig adress</string>
   <!-- Is rescanning error message -->
   <string name="Send.isRescanning">Skicka är avaktiverat under en full omskanning.</string>
-  <!-- Warning when the user is trying to send bitcoin cash to a legacy bitcoin address (possible, but probably not what the user wants to do) -->
-  <string name="Send.legacyAddressWarning">Varning: detta är en legacy bitcoin-adress. Är du säker på att du vill skicka Bitcoin Cash till den?</string>
+  <!-- Warning when the user is trying to send sumcoin cash to a legacy sumcoin address (possible, but probably not what the user wants to do) -->
+  <string name="Send.legacyAddressWarning">Varning: detta är en legacy sumcoin-adress. Är du säker på att du vill skicka Sumcoin Cash till den?</string>
   <!-- We are loading the request (now) -->
   <string name="Send.loadingRequest">Laddar förfrågan</string>
   <!-- Transaction fee could not be be caluculated error. -->
@@ -567,7 +567,7 @@
   <!-- Send money to label -->
   <string name="Send.toLabel">Till</string>
   <!-- Adress already used alert message - first part -->
-  <string name="Send.UsedAddress.firstLine">Bitcoin-adresser är avsedda för engångsanvändning.</string>
+  <string name="Send.UsedAddress.firstLine">Sumcoin-adresser är avsedda för engångsanvändning.</string>
   <!-- Adress already used alert message - second part -->
   <string name="Send.UsedAddress.secondLIne">Återanvändning minskar sekretessen både för dig och mottagaren och kan sluta i förlust om mottagaren inte direkt kontrollerar adressen.</string>
   <!-- Adress already used alert title -->
@@ -635,7 +635,7 @@
   <!-- button label -->
   <string name="StartViewController.createButton">Skapa ny plånbok</string>
   <!-- Start view message -->
-  <string name="StartViewController.message">Det säkraste och tryggaste sättet att använda bitcoin.</string>
+  <string name="StartViewController.message">Det säkraste och tryggaste sättet att använda sumcoin.</string>
   <!-- Recover your wallet from a backup -->
   <string name="StartViewController.recoverButton">Återställ plånbok</string>
   <!-- Syncing view connectiong state header text -->
@@ -825,7 +825,7 @@
   <!-- Tx detail field header -->
   <string name="TransactionDetails.totalHeader">Totalt</string>
   <!-- Transaction ID header -->
-  <string name="TransactionDetails.txHashHeader">Bitcoin transaktions-ID</string>
+  <string name="TransactionDetails.txHashHeader">Sumcoin transaktions-ID</string>
   <!-- (this transaction was) Received at this address: -->
   <string name="TransactionDirection.address">Togs emot på den här adressen</string>
   <!-- (this transaction was) Sent to this address: -->
@@ -855,7 +855,7 @@
   <!-- Wallet unlocked message -->
   <string name="UnlockScreen.unlocked">Plånbok upplåst</string>
   <!-- Update PIN caption text -->
-  <string name="UpdatePin.caption">Kom ihåg PIN-koden. Om du glömmer den, kommer du inte åt dina bitcoin.</string>
+  <string name="UpdatePin.caption">Kom ihåg PIN-koden. Om du glömmer den, kommer du inte åt dina sumcoin.</string>
   <!-- PIN creation info. -->
   <string name="UpdatePin.createInstruction">Din PIN-kod används för att låsa upp ditt Bread och skicka pengar</string>
   <!-- Update PIN title -->

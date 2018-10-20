@@ -1,11 +1,11 @@
-//package com.breadwallet.presenter.activities.tests;
+//package com.sumpay.presenter.activities.tests;
 //
 //import android.support.test.rule.ActivityTestRule;
 //import android.support.test.runner.AndroidJUnit4;
 //
-//import com.breadwallet.R;
-//import com.breadwallet.presenter.activities.MainActivity;
-//import com.breadwallet.tools.adapter.CurrencyListAdapter;
+//import com.sumpay.R;
+//import com.sumpay.presenter.activities.MainActivity;
+//import com.sumpay.tools.adapter.CurrencyListAdapter;
 //
 //import org.junit.Rule;
 //import org.junit.Test;
@@ -30,7 +30,7 @@
 // * BreadWallet
 // * <p/>
 // * Created by Mihail on 7/7/15.
-// * Copyright (c) 2015 Mihail Gutan <mihail@breadwallet.com>
+// * Copyright (c) 2015 Mihail Gutan <mihail@sumpay.com>
 // * <p/>
 // * Permission is hereby granted, free of charge, to any person obtaining a copy
 // * of this software and associated documentation files (the "Software"), to deal

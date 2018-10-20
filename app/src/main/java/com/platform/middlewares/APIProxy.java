@@ -3,8 +3,8 @@ package com.platform.middlewares;
 import android.content.Context;
 import android.util.Log;
 
-import com.breadwallet.BreadApp;
-import com.breadwallet.tools.util.Utils;
+import com.sumpay.BreadApp;
+import com.sumpay.tools.util.Utils;
 import com.platform.APIClient;
 import com.platform.interfaces.Middleware;
 
@@ -26,8 +26,8 @@ import okhttp3.RequestBody;
 /**
  * BreadWallet
  * <p/>
- * Created by Mihail Gutan on <mihail@breadwallet.com> 10/19/16.
- * Copyright (c) 2016 breadwallet LLC
+ * Created by Mihail Gutan on <mihail@sumpay.com> 10/19/16.
+ * Copyright (c) 2016 sumpay LLC
  * <p/>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
