@@ -298,7 +298,7 @@ public class FragmentSend extends ModalDialogFragment implements BRKeyboard.OnIn
                 final BaseWalletManager wm = WalletsMaster.getInstance(getActivity()).getCurrentWallet(getActivity());
 
 
-                if (Utils.isEmulatorOrDebug(getActivity()) && BuildConfig.BITCOIN_TESTNET) {
+                if (Utils.isEmulatorOrDebug(getActivity()) && BuildConfig.SUMCOIN_TESTNET) {
                     theUrl = wm.decorateAddress(theUrl);
                 }
 
@@ -855,7 +855,7 @@ public class FragmentSend extends ModalDialogFragment implements BRKeyboard.OnIn
             code = request.iso;
 
             if (request.amount != null) {
-                BigDecimal satoshiAmount = request.amount.multiply(new BigDecimal(BaseSumcoinWalletManager.ONE_BITCOIN_IN_SATOSHIS));
+                BigDecimal satoshiAmount = request.amount.multiply(new BigDecimal(BaseSumcoinWalletManager.ONE_SUMCOIN_IN_SATOSHIS));
                 amount = wm.getFiatForSmallestCrypto(getActivity(), satoshiAmount, null).toPlainString();
             } else if (request.value != null) {
                 // ETH request amount param is named `value`

@@ -132,7 +132,7 @@ public class BreadApp extends Application {
             throw new RuntimeException("can't be alpha for release");
 
         boolean isTestVersion = APIClient.getInstance(this).isStaging();
-        boolean isTestNet = BuildConfig.BITCOIN_TESTNET;
+        boolean isTestNet = BuildConfig.SUMCOIN_TESTNET;
         String lang = getCurrentLocale(this);
 
         mHeaders.put(BRApiManager.HEADER_IS_INTERNAL, IS_ALPHA ? "true" : "false");

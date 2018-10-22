@@ -138,7 +138,7 @@ public class APIClient {
     private Context mContext;
 
     public enum FeatureFlags {
-        BUY_BITCOIN("buy-sumcoin"),
+        BUY_SUMCOIN("buy-sumcoin"),
         EARLY_ACCESS("early-access");
 
         private final String text;

@@ -222,7 +222,7 @@ public class InputWordsActivity extends BRActivity implements View.OnFocusChange
                         PostAuth.getInstance().setCachedPaperKey(cleanPhrase);
                         //Disallow SUM and BCH sending.
                         BRSharedPrefs.putAllowSpend(app, BaseSumcoinWalletManager.BITCASH_SYMBOL, false);
-                        BRSharedPrefs.putAllowSpend(app, BaseSumcoinWalletManager.BITCOIN_SYMBOL, false);
+                        BRSharedPrefs.putAllowSpend(app, BaseSumcoinWalletManager.SUMCOIN_SYMBOL, false);
 
                         PostAuth.getInstance().onRecoverWalletAuth(app, false);
                     }

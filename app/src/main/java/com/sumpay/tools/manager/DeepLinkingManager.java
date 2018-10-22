@@ -34,7 +34,7 @@ import com.sumpay.wallet.util.CryptoUriParser;
  */
 public class DeepLinkingManager {
     private static final String TAG = DeepLinkingManager.class.getSimpleName();
-    public static final String SCHEME_BITCOIN = "sumcoin";
+    public static final String SCHEME_SUMCOIN = "sumcoin";
     public static final String SCHEME_BREAD = "bread";
     public static final String SCHEME_BCH = "sumcoincash";
     public static final String SCHEME_BCH_TESTNET = "bchtest";

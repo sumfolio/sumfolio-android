@@ -77,11 +77,11 @@ public abstract class BaseSumcoinWalletManager extends BRCoreWalletManager imple
 
     private static final String TAG = BaseSumcoinWalletManager.class.getSimpleName();
 
-    public static final int ONE_BITCOIN_IN_SATOSHIS = 100000000; // 1 Sumcoin in satoshis, 100 millions
+    public static final int ONE_SUMCOIN_IN_SATOSHIS = 100000000; // 1 Sumcoin in satoshis, 100 millions
     private static final long MAXIMUM_AMOUNT = 100000000; // Maximum number of coins available
     private static final int SYNC_MAX_RETRY = 3;
 
-    public static final String BITCOIN_SYMBOL = "SUM";
+    public static final String SUMCOIN_SYMBOL = "SUM";
     public static final String BITCASH_SYMBOL = "BCH";
 
     private WalletSettingsConfiguration mSettingsConfig;
@@ -340,7 +340,7 @@ public abstract class BaseSumcoinWalletManager extends BRCoreWalletManager imple
                 case BRConstants.CURRENT_UNIT_MBITS:
                     currencySymbolString = "m" + getIso();
                     break;
-                case BRConstants.CURRENT_UNIT_BITCOINS:
+                case BRConstants.CURRENT_UNIT_SUMCOINS:
                     currencySymbolString = getIso();
                     break;
             }
@@ -359,7 +359,7 @@ public abstract class BaseSumcoinWalletManager extends BRCoreWalletManager imple
 
     @Override
     public String getDenominator() {
-        return String.valueOf(ONE_BITCOIN_IN_SATOSHIS);
+        return String.valueOf(ONE_SUMCOIN_IN_SATOSHIS);
     }
 
     @Override
@@ -483,7 +483,7 @@ public abstract class BaseSumcoinWalletManager extends BRCoreWalletManager imple
         }
         double rate = ent.rate;
         //get crypto amount
-        BigDecimal cryptoAmount = amount.divide(new BigDecimal(ONE_BITCOIN_IN_SATOSHIS), getMaxDecimalPlaces(app), BRConstants.ROUNDING_MODE);
+        BigDecimal cryptoAmount = amount.divide(new BigDecimal(ONE_SUMCOIN_IN_SATOSHIS), getMaxDecimalPlaces(app), BRConstants.ROUNDING_MODE);
         return cryptoAmount.multiply(new BigDecimal(rate));
     }
 
@@ -505,7 +505,7 @@ public abstract class BaseSumcoinWalletManager extends BRCoreWalletManager imple
             case BRConstants.CURRENT_UNIT_BITS:
                 result = fiatAmount.divide(new BigDecimal(rate), 2, ROUNDING_MODE).multiply(new BigDecimal("1000000"));
                 break;
-            case BRConstants.CURRENT_UNIT_BITCOINS:
+            case BRConstants.CURRENT_UNIT_SUMCOINS:
                 result = fiatAmount.divide(new BigDecimal(rate), getMaxDecimalPlaces(app), ROUNDING_MODE);
                 break;
         }
@@ -525,7 +525,7 @@ public abstract class BaseSumcoinWalletManager extends BRCoreWalletManager imple
             case BRConstants.CURRENT_UNIT_MBITS:
                 result = amount.divide(new BigDecimal("100000"), 5, ROUNDING_MODE);
                 break;
-            case BRConstants.CURRENT_UNIT_BITCOINS:
+            case BRConstants.CURRENT_UNIT_SUMCOINS:
                 result = amount.divide(new BigDecimal("100000000"), 8, ROUNDING_MODE);
                 break;
         }
@@ -544,7 +544,7 @@ public abstract class BaseSumcoinWalletManager extends BRCoreWalletManager imple
             case BRConstants.CURRENT_UNIT_MBITS:
                 result = amount.multiply(new BigDecimal("100000"));
                 break;
-            case BRConstants.CURRENT_UNIT_BITCOINS:
+            case BRConstants.CURRENT_UNIT_SUMCOINS:
                 result = amount.multiply(new BigDecimal("100000000"));
                 break;
         }

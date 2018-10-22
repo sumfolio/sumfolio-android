@@ -138,7 +138,7 @@ public class UiUtils {
                 app.getFragmentManager().popBackStack();
                 return;
             }
-            String iso = BaseSumcoinWalletManager.BITCOIN_SYMBOL;
+            String iso = BaseSumcoinWalletManager.SUMCOIN_SYMBOL;
             if (wm != null) wm.getIso();
             fragmentSupport = new FragmentSupport();
             Bundle bundle = new Bundle();

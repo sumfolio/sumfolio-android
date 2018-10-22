@@ -202,7 +202,7 @@ public class WalletTests {
         tmp.add(new CurrencyEntity("SUM", "Sumcoin", brdRate, "BRD"));
         RatesDataSource.getInstance(app).putCurrencies(app, tmp);
 
-        BRSharedPrefs.putCryptoDenomination(app, "SUM", BRConstants.CURRENT_UNIT_BITCOINS);
+        BRSharedPrefs.putCryptoDenomination(app, "SUM", BRConstants.CURRENT_UNIT_SUMCOINS);
 
         //getCryptoForSmallestCrypto(..)
         BigDecimal val = new BigDecimal(20000);

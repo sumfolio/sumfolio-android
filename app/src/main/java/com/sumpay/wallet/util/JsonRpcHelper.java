@@ -38,8 +38,8 @@ import okhttp3.RequestBody;
  * THE SOFTWARE.
  */
 public class JsonRpcHelper {
-    private static final String BRD_ETH_RPC_ENDPOINT = BuildConfig.BITCOIN_TESTNET ? "/ethq/ropsten/proxy" : "/ethq/mainnet/proxy";
-    private static final String BRD_ETH_TX_ENDPOINT = BuildConfig.BITCOIN_TESTNET ? "/ethq/ropsten/" : "/ethq/mainnet/";
+    private static final String BRD_ETH_RPC_ENDPOINT = BuildConfig.SUMCOIN_TESTNET ? "/ethq/ropsten/proxy" : "/ethq/mainnet/proxy";
+    private static final String BRD_ETH_TX_ENDPOINT = BuildConfig.SUMCOIN_TESTNET ? "/ethq/ropsten/" : "/ethq/mainnet/";
     private static final String PROTOCOL = "https";
     public static final String METHOD = "method";
     public static final String JSONRPC = "jsonrpc";

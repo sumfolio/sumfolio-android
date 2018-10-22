@@ -57,14 +57,14 @@ android {
             applicationId = "com.sumpay"
             dimension "mode"
             resValue "string", "app_name", "BRD"
-            buildConfigField "boolean", "BITCOIN_TESTNET", "false"
+            buildConfigField "boolean", "SUMCOIN_TESTNET", "false"
 
             externalNativeBuild {
                 cmake {
                     // When you specify a version of CMake, as shown below,
                     // the Android plugin searches for its binary within your
                     // PATH environmental variable.
-                    cFlags "-DBITCOIN_TESTNET=0"
+                    cFlags "-DSUMCOIN_TESTNET=0"
                     targets "core"
                 }
             }
@@ -74,14 +74,14 @@ android {
             applicationId = "com.breadtestnet"
             dimension "mode"
             resValue "string", "app_name", "BRD-testnet"
-            buildConfigField "boolean", "BITCOIN_TESTNET", "true"
+            buildConfigField "boolean", "SUMCOIN_TESTNET", "true"
 
             externalNativeBuild {
                 cmake {
                     // When you specify a version of CMake, as shown below,
                     // the Android plugin searches for its binary within your
                     // PATH environmental variable.
-                    cFlags "-DBITCOIN_TESTNET=1"
+                    cFlags "-DSUMCOIN_TESTNET=1"
                     targets "core"
                 }
             }
@@ -123,7 +123,7 @@ android {
             ext.alwaysUpdateBuildId = false
             externalNativeBuild {
                 cmake {
-                    cFlags "-DBITCOIN_DEBUG=1"
+                    cFlags "-DSUMCOIN_DEBUG=1"
                 }
             }
 

@@ -67,12 +67,12 @@ public final class BRConstants {
      */
     public static final int CURRENT_UNIT_BITS = 0;
     public static final int CURRENT_UNIT_MBITS = 1;
-    public static final int CURRENT_UNIT_BITCOINS = 2;
+    public static final int CURRENT_UNIT_SUMCOINS = 2;
 
     public static final String BITS_SYMBOL = "\u03C3";
     public static final String ETH_SYMBOL = "\u039E";
-    public static final String BITCOIN_SYBMOL_OLD = "\u0243";
-    public static final String BITCOIN_SYMBOL = "\u2211";
+    public static final String SUMCOIN_SYBMOL_OLD = "\u0243";
+    public static final String SUMCOIN_SYMBOL = "\u2211";
 
     public static final RoundingMode ROUNDING_MODE = RoundingMode.HALF_EVEN;
     public static final boolean WRITE_AHEAD_LOGGING = true;

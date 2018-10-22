@@ -146,7 +146,7 @@ public class DisplayCurrencyActivity extends BaseSettingsActivity {
             mRightButton.setTextColor(getColor(R.color.dark_blue));
             mRightButton.setBackground(getDrawable(R.drawable.b_half_right_blue_stroke));
         } else {
-            BRSharedPrefs.putCryptoDenomination(this, "SUM", BRConstants.CURRENT_UNIT_BITCOINS);
+            BRSharedPrefs.putCryptoDenomination(this, "SUM", BRConstants.CURRENT_UNIT_SUMCOINS);
             mLeftButton.setTextColor(getColor(R.color.dark_blue));
             mLeftButton.setBackground(getDrawable(R.drawable.b_half_left_blue_stroke));
             mRightButton.setTextColor(getColor(R.color.white));

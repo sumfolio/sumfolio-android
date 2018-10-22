@@ -313,7 +313,7 @@ public class FragmentReceive extends ModalDialogFragment implements OnBalanceCha
         Activity app = getActivity();
         BRClipboardManager.putClipboard(app, mAddress.getText().toString());
         //copy the legacy for testing purposes (testnet faucet money receiving)
-        if (Utils.isEmulatorOrDebug(app) && BuildConfig.BITCOIN_TESTNET)
+        if (Utils.isEmulatorOrDebug(app) && BuildConfig.SUMCOIN_TESTNET)
             BRClipboardManager.putClipboard(app, WalletsMaster.getInstance(app).getCurrentWallet(app).undecorateAddress(mAddress.getText().toString()));
 
         showCopiedLayout(true);

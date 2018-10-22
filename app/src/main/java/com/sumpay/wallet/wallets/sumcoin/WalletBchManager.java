@@ -52,7 +52,7 @@ public final class WalletBchManager extends BaseSumcoinWalletManager {
 
     private static final String ISO = BITCASH_SYMBOL;
     private static final String NAME = "Sumcoin Cash";
-    private static final String SCHEME = BuildConfig.BITCOIN_TESTNET ? "bchtest" : "sumcoincash";
+    private static final String SCHEME = BuildConfig.SUMCOIN_TESTNET ? "bchtest" : "sumcoincash";
     private static final String COLOR = "#478559";
     private static final long MAINNET_FORK_TIME = 1501568580; // Tuesday, August 1, 2017 6:23:00 AM GMT in seconds since Epoch
     private static final long TESTNET_FORK_TIME = 1501597117; // Tuesday, August 1, 2017 2:18:37 PM GMT in seconds since Epoch
@@ -69,8 +69,8 @@ public final class WalletBchManager extends BaseSumcoinWalletManager {
             BRCoreMasterPubKey pubKey = new BRCoreMasterPubKey(rawPubKey, false);
             long time = BRKeyStore.getWalletCreationTime(context);
             if (!BRSharedPrefs.getBchPreforkSynced(context) && time == 0)
-                time = BuildConfig.BITCOIN_TESTNET ? TESTNET_FORK_TIME : MAINNET_FORK_TIME;
-            mInstance = new WalletBchManager(context, pubKey, BuildConfig.BITCOIN_TESTNET ?
+                time = BuildConfig.SUMCOIN_TESTNET ? TESTNET_FORK_TIME : MAINNET_FORK_TIME;
+            mInstance = new WalletBchManager(context, pubKey, BuildConfig.SUMCOIN_TESTNET ?
                     BRCoreChainParams.testnetBcashChainParams : BRCoreChainParams.mainnetBcashChainParams, time);
         }
         return mInstance;
@@ -112,11 +112,11 @@ public final class WalletBchManager extends BaseSumcoinWalletManager {
 
     protected List<BigDecimal> getFingerprintLimits(Context app) {
         List<BigDecimal> result = new ArrayList<>();
-        result.add(new BigDecimal(ONE_BITCOIN_IN_SATOSHIS).divide(new BigDecimal(100), getMaxDecimalPlaces(app), BRConstants.ROUNDING_MODE));
-        result.add(new BigDecimal(ONE_BITCOIN_IN_SATOSHIS).divide(new BigDecimal(10), getMaxDecimalPlaces(app), BRConstants.ROUNDING_MODE));
-        result.add(new BigDecimal(ONE_BITCOIN_IN_SATOSHIS));
-        result.add(new BigDecimal(ONE_BITCOIN_IN_SATOSHIS).multiply(new BigDecimal(10)));
-        result.add(new BigDecimal(ONE_BITCOIN_IN_SATOSHIS).multiply(new BigDecimal(100)));
+        result.add(new BigDecimal(ONE_SUMCOIN_IN_SATOSHIS).divide(new BigDecimal(100), getMaxDecimalPlaces(app), BRConstants.ROUNDING_MODE));
+        result.add(new BigDecimal(ONE_SUMCOIN_IN_SATOSHIS).divide(new BigDecimal(10), getMaxDecimalPlaces(app), BRConstants.ROUNDING_MODE));
+        result.add(new BigDecimal(ONE_SUMCOIN_IN_SATOSHIS));
+        result.add(new BigDecimal(ONE_SUMCOIN_IN_SATOSHIS).multiply(new BigDecimal(10)));
+        result.add(new BigDecimal(ONE_SUMCOIN_IN_SATOSHIS).multiply(new BigDecimal(100)));
         return result;
     }
 

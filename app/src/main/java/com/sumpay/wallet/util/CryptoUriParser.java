@@ -311,7 +311,7 @@ public class CryptoUriParser {
                 BigDecimal ethAmount = cryptoAmount.divide(new BigDecimal(WalletEthManager.ETHER_WEI), 3, BRConstants.ROUNDING_MODE);
                 builder = builder.appendQueryParameter("value", ethAmount.toPlainString() + "e18");
             } else if (iso.equalsIgnoreCase("SUM") || iso.equalsIgnoreCase("BCH")) {
-                BigDecimal amount = cryptoAmount.divide(new BigDecimal(BaseSumcoinWalletManager.ONE_BITCOIN_IN_SATOSHIS), 8, BRConstants.ROUNDING_MODE);
+                BigDecimal amount = cryptoAmount.divide(new BigDecimal(BaseSumcoinWalletManager.ONE_SUMCOIN_IN_SATOSHIS), 8, BRConstants.ROUNDING_MODE);
                 builder = builder.appendQueryParameter("amount", amount.toPlainString());
             } else {
                 throw new RuntimeException("URI not supported for: " + iso);

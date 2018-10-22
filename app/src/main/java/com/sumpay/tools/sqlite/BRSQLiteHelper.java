@@ -213,8 +213,8 @@ public class BRSQLiteHelper extends SQLiteOpenHelper {
     private void copyTxsForBch(SQLiteDatabase db) {
         List<BRTransactionEntity> transactions = new ArrayList<>();
         Cursor cursorGet = null;
-        int bCashForkBlockHeight = BuildConfig.BITCOIN_TESTNET ? 1155876 : 478559;
-        int bCashForkTimeStamp = BuildConfig.BITCOIN_TESTNET ? 1501597117 : 1501568580;
+        int bCashForkBlockHeight = BuildConfig.SUMCOIN_TESTNET ? 1155876 : 478559;
+        int bCashForkTimeStamp = BuildConfig.SUMCOIN_TESTNET ? 1501597117 : 1501568580;
         db.beginTransaction();
         try {
             cursorGet = db.query(BRSQLiteHelper.TX_TABLE_NAME,

@@ -179,7 +179,7 @@ public class WalletEthManager extends BaseEthereumWalletManager implements  BREt
                     return null;
                 }
             }
-            mInstance = new WalletEthManager(app, ethPubKey, BuildConfig.BITCOIN_TESTNET ? BREthereumNetwork.testnet : BREthereumNetwork.mainnet);
+            mInstance = new WalletEthManager(app, ethPubKey, BuildConfig.SUMCOIN_TESTNET ? BREthereumNetwork.testnet : BREthereumNetwork.mainnet);
 
         }
         return mInstance;

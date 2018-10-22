@@ -68,7 +68,7 @@ import okhttp3.Response;
  */
 public class BRBitId {
     public static final String TAG = BRBitId.class.getName();
-    public static final String BITCOIN_SIGNED_MESSAGE_HEADER = "Sumcoin Signed Message:\n";
+    public static final String SUMCOIN_SIGNED_MESSAGE_HEADER = "Sumcoin Signed Message:\n";
 
     private static String _bitUri;
     private static String _bitIdUrl;
@@ -361,7 +361,7 @@ public class BRBitId {
         byte[] messageBytes = null;
 
         try {
-            headerBytes = BITCOIN_SIGNED_MESSAGE_HEADER.getBytes("UTF-8");
+            headerBytes = SUMCOIN_SIGNED_MESSAGE_HEADER.getBytes("UTF-8");
             messageBytes = message.getBytes("UTF-8");
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();

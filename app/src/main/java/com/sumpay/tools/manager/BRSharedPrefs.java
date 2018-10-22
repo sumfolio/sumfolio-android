@@ -390,7 +390,7 @@ public class BRSharedPrefs {
     //ignore iso, using same denomination for both for now
     public static int getCryptoDenomination(Context context, String iso) {
         SharedPreferences settingsToGet = context.getSharedPreferences(PREFS_NAME, 0);
-        return settingsToGet.getInt("currencyUnit", BRConstants.CURRENT_UNIT_BITCOINS);
+        return settingsToGet.getInt("currencyUnit", BRConstants.CURRENT_UNIT_SUMCOINS);
 
     }
 

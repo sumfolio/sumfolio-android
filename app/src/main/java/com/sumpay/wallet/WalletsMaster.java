@@ -355,7 +355,7 @@ public class WalletsMaster {
             }
         }
         BaseWalletManager wallet = getWalletByIso(app, BRSharedPrefs.getCurrentWalletIso(app));
-        if (wallet == null) wallet = getWalletByIso(app, BaseSumcoinWalletManager.BITCOIN_SYMBOL);
+        if (wallet == null) wallet = getWalletByIso(app, BaseSumcoinWalletManager.SUMCOIN_SYMBOL);
         if (wallet != null) {
             wallet.connect(app);
         }
