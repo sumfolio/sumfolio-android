@@ -36,7 +36,7 @@ public class DeepLinkingManager {
     private static final String TAG = DeepLinkingManager.class.getSimpleName();
     public static final String SCHEME_SUMCOIN = "sumcoin";
     public static final String SCHEME_BREAD = "bread";
-    public static final String SCHEME_BCH = "sumcoincash";
+    public static final String SCHEME_BCH = "bitcoincash";
     public static final String SCHEME_BCH_TESTNET = "bchtest";
     public static final String SCHEME_HTTPS = "https";
 

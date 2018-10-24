@@ -162,7 +162,7 @@ public interface BaseWalletManager {
     //get the currency denomination e.g. Sumcoin - SUM, Ether - ETH
     String getIso();
 
-    //get the currency scheme (sumcoin or sumcoincash)
+    //get the currency scheme (sumcoin or bitcoincash)
     String getScheme();
 
     //get the currency name e.g. Sumcoin

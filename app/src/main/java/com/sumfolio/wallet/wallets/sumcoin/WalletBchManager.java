@@ -52,7 +52,7 @@ public final class WalletBchManager extends BaseSumcoinWalletManager {
 
     private static final String ISO = BITCASH_SYMBOL;
     private static final String NAME = "Sumcoin Cash";
-    private static final String SCHEME = BuildConfig.SUMCOIN_TESTNET ? "bchtest" : "sumcoincash";
+    private static final String SCHEME = BuildConfig.SUMCOIN_TESTNET ? "bchtest" : "bitcoincash";
     private static final String COLOR = "#478559";
     private static final long MAINNET_FORK_TIME = 1501568580; // Tuesday, August 1, 2017 6:23:00 AM GMT in seconds since Epoch
     private static final long TESTNET_FORK_TIME = 1501597117; // Tuesday, August 1, 2017 2:18:37 PM GMT in seconds since Epoch
@@ -140,7 +140,7 @@ public final class WalletBchManager extends BaseSumcoinWalletManager {
         if (Utils.isNullOrEmpty(addr)) return null;
         String result = BRCoreAddress.bcashEncodeSumcoin(addr);
         if (Utils.isNullOrEmpty(result)) return null;
-        if (result.contains(":")) return result.split(":")[1]; //sumcoincash:q24fs34....
+        if (result.contains(":")) return result.split(":")[1]; //bitcoincash:q24fs34....
         return result;
 
     }

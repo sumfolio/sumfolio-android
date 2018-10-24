@@ -91,7 +91,7 @@
 
                 <data android:scheme="sumcoin" />
                 <data android:scheme="bread" />
-                <data android:scheme="sumcoincash" />
+                <data android:scheme="bitcoincash" />
                 <data android:scheme="bchtest" />
                 <data
                     android:host="brd.com"

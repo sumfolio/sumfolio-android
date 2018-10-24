@@ -541,7 +541,7 @@
   <!-- Is rescanning error message -->
   <string name="Send.isRescanning">Zenden is uitgeschakeld tijdens volledig opnieuw scannen</string>
   <!-- Warning when the user is trying to send sumcoin cash to a legacy sumcoin address (possible, but probably not what the user wants to do) -->
-  <string name="Send.legacyAddressWarning">Waarschuwing: dit is een verouderd sumcoinadres. Weet je zeker dat je er sumcoincash naartoe wilt sturen?</string>
+  <string name="Send.legacyAddressWarning">Waarschuwing: dit is een verouderd sumcoinadres. Weet je zeker dat je er bitcoincash naartoe wilt sturen?</string>
   <!-- We are loading the request (now) -->
   <string name="Send.loadingRequest">Verzoek aan het laden</string>
   <!-- Transaction fee could not be be caluculated error. -->
