@@ -1,4 +1,4 @@
-package com.sumpay.wallet;
+package com.sumfolio.wallet;
 
 import android.app.Activity;
 import android.support.test.filters.LargeTest;
@@ -6,22 +6,22 @@ import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 import android.util.Log;
 
-import com.sumpay.BreadApp;
-import com.sumpay.core.BRCoreMasterPubKey;
-import com.sumpay.presenter.activities.settings.TestActivity;
-import com.sumpay.presenter.entities.CurrencyEntity;
-import com.sumpay.presenter.entities.CryptoRequest;
-import com.sumpay.tools.manager.BRSharedPrefs;
-import com.sumpay.tools.security.BRKeyStore;
-import com.sumpay.tools.sqlite.RatesDataSource;
-import com.sumpay.tools.threads.executor.BRExecutor;
-import com.sumpay.wallet.abstracts.BaseWalletManager;
-import com.sumpay.wallet.wallets.sumcoin.WalletBchManager;
-import com.sumpay.wallet.util.CryptoUriParser;
-import com.sumpay.tools.util.BRConstants;
-import com.sumpay.wallet.wallets.sumcoin.WalletSumcoinManager;
-import com.sumpay.wallet.wallets.ethereum.WalletEthManager;
-import com.sumpay.wallet.wallets.ethereum.WalletTokenManager;
+import com.sumfolio.BreadApp;
+import com.sumfolio.core.BRCoreMasterPubKey;
+import com.sumfolio.presenter.activities.settings.TestActivity;
+import com.sumfolio.presenter.entities.CurrencyEntity;
+import com.sumfolio.presenter.entities.CryptoRequest;
+import com.sumfolio.tools.manager.BRSharedPrefs;
+import com.sumfolio.tools.security.BRKeyStore;
+import com.sumfolio.tools.sqlite.RatesDataSource;
+import com.sumfolio.tools.threads.executor.BRExecutor;
+import com.sumfolio.wallet.abstracts.BaseWalletManager;
+import com.sumfolio.wallet.wallets.sumcoin.WalletBchManager;
+import com.sumfolio.wallet.util.CryptoUriParser;
+import com.sumfolio.tools.util.BRConstants;
+import com.sumfolio.wallet.wallets.sumcoin.WalletSumcoinManager;
+import com.sumfolio.wallet.wallets.ethereum.WalletEthManager;
+import com.sumfolio.wallet.wallets.ethereum.WalletTokenManager;
 
 
 import org.json.JSONException;
@@ -46,7 +46,7 @@ import static org.junit.Assert.assertEquals;
  * BreadWallet
  * <p/>
  * Created by Mihail Gutan on 4/29/16.
- * Copyright (c) 2016 sumpay llc <mihail@sumpay.com>
+ * Copyright (c) 2016 sumfolio llc <mihail@sumfolio.com>
  * <p/>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal

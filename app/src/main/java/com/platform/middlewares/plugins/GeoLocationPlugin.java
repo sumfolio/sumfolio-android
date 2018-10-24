@@ -9,10 +9,10 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
 
-import com.sumpay.BreadApp;
-import com.sumpay.tools.manager.BRSharedPrefs;
-import com.sumpay.tools.threads.executor.BRExecutor;
-import com.sumpay.tools.util.BRConstants;
+import com.sumfolio.BreadApp;
+import com.sumfolio.tools.manager.BRSharedPrefs;
+import com.sumfolio.tools.threads.executor.BRExecutor;
+import com.sumfolio.tools.util.BRConstants;
 import com.platform.APIClient;
 import com.platform.BRHTTPHelper;
 import com.platform.GeoLocationManager;
@@ -32,8 +32,8 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * BreadWallet
  * <p/>
- * Created by Mihail Gutan on <mihail@sumpay.com> 11/2/16.
- * Copyright (c) 2016 sumpay LLC
+ * Created by Mihail Gutan on <mihail@sumfolio.com> 11/2/16.
+ * Copyright (c) 2016 sumfolio LLC
  * <p/>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal

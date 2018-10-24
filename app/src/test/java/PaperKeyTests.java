@@ -1,7 +1,7 @@
 import android.util.Log;
 
-import com.sumpay.tools.util.Bip39Reader;
-import com.sumpay.wallet.WalletsMaster;
+import com.sumfolio.tools.util.Bip39Reader;
+import com.sumfolio.wallet.WalletsMaster;
 
 import org.apache.commons.io.IOUtils;
 import org.junit.Test;
@@ -19,8 +19,8 @@ import static org.junit.Assert.assertThat;
 /**
  * BreadWallet
  * <p/>
- * Created by Mihail Gutan on <mihail@sumpay.com> 11/3/17.
- * Copyright (c) 2017 sumpay LLC
+ * Created by Mihail Gutan on <mihail@sumfolio.com> 11/3/17.
+ * Copyright (c) 2017 sumfolio LLC
  * <p/>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal

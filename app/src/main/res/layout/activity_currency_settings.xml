@@ -27,7 +27,7 @@
 
     </android.support.v7.widget.Toolbar>
 
-    <com.sumpay.presenter.customviews.BaseTextView
+    <com.sumfolio.presenter.customviews.BaseTextView
         app:customTFont="CircularPro-Bold.otf"
         android:id="@+id/title"
         android:layout_width="wrap_content"

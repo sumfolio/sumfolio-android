@@ -1,13 +1,13 @@
-package com.sumpay.platform;
+package com.sumfolio.platform;
 
 import android.support.test.filters.LargeTest;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
-import com.sumpay.presenter.activities.intro.WriteDownActivity;
-import com.sumpay.presenter.activities.settings.TestActivity;
-import com.sumpay.tools.threads.executor.BRExecutor;
-import com.sumpay.tools.util.BRConstants;
+import com.sumfolio.presenter.activities.intro.WriteDownActivity;
+import com.sumfolio.presenter.activities.settings.TestActivity;
+import com.sumfolio.tools.threads.executor.BRExecutor;
+import com.sumfolio.tools.util.BRConstants;
 import com.platform.entities.TxMetaData;
 import com.platform.interfaces.KVStoreAdaptor;
 import com.platform.kvstore.CompletionObject;
@@ -36,8 +36,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 /**
  * BreadWallet
  * <p/>
- * Created by Mihail Gutan on <mihail@sumpay.com> 9/30/16.
- * Copyright (c) 2016 sumpay LLC
+ * Created by Mihail Gutan on <mihail@sumfolio.com> 9/30/16.
+ * Copyright (c) 2016 sumfolio LLC
  * <p/>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal

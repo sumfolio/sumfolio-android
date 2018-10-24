@@ -1,4 +1,4 @@
-//package com.sumpay.presenter;
+//package com.sumfolio.presenter;
 //
 //import android.support.test.rule.ActivityTestRule;
 //import android.support.test.runner.AndroidJUnit4;
@@ -6,8 +6,8 @@
 //import android.widget.Button;
 //import android.widget.TextView;
 //
-//import com.sumpay.R;
-//import com.sumpay.presenter.activities.MainActivity;
+//import com.sumfolio.R;
+//import com.sumfolio.presenter.activities.MainActivity;
 //
 //import org.junit.Before;
 //import org.junit.Rule;
@@ -26,7 +26,7 @@
 // * BreadWallet
 // * <p/>
 // * Created by Mihail on 8/28/15.
-// * Copyright (c) 2015 Mihail Gutan <mihail@sumpay.com>
+// * Copyright (c) 2015 Mihail Gutan <mihail@sumfolio.com>
 // * <p/>
 // * Permission is hereby granted, free of charge, to any person obtaining a copy
 // * of this software and associated documentation files (the "Software"), to deal

@@ -8,8 +8,8 @@ import com.platform.kvstore.CompletionObject;
 /**
  * BreadWallet
  * <p>
- * Created by Mihail Gutan <mihail@sumpay.com> on 1/13/16.
- * Copyright (c) 2016 sumpay LLC
+ * Created by Mihail Gutan <mihail@sumfolio.com> on 1/13/16.
+ * Copyright (c) 2016 sumfolio LLC
  * <p>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal

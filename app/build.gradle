@@ -7,7 +7,7 @@ android {
 
     defaultConfig {
         testInstrumentationRunner = 'android.support.test.runner.AndroidJUnitRunner'
-        applicationId = 'com.sumpay'
+        applicationId = 'com.sumfolio'
         minSdkVersion 23
         targetSdkVersion 27
         versionCode 291
@@ -54,7 +54,7 @@ android {
 
     productFlavors {
         brd {
-            applicationId = "com.sumpay"
+            applicationId = "com.sumfolio"
             dimension "mode"
             resValue "string", "app_name", "BRD"
             buildConfigField "boolean", "SUMCOIN_TESTNET", "false"
@@ -137,7 +137,7 @@ android {
     }
     sourceSets {
         main {
-            java.srcDirs = ['src/main/java', 'src/main/jni/sumpay-core/Java/root', 'src/main/jni/sumpay-core/ethereum/Java/root']
+            java.srcDirs = ['src/main/java', 'src/main/jni/sumfolio-core/Java/root', 'src/main/jni/sumfolio-core/ethereum/Java/root']
         }
     }
 }

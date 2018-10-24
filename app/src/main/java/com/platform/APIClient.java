@@ -8,18 +8,18 @@ import android.os.NetworkOnMainThreadException;
 import android.support.annotation.NonNull;
 import android.util.Log;
 
-import com.sumpay.BreadApp;
-import com.sumpay.core.BRCoreKey;
-import com.sumpay.tools.animation.UiUtils;
-import com.sumpay.tools.crypto.Base58;
-import com.sumpay.tools.manager.BRReportsManager;
-import com.sumpay.tools.manager.BRSharedPrefs;
-import com.sumpay.tools.crypto.CryptoHelper;
-import com.sumpay.tools.security.BRKeyStore;
-import com.sumpay.tools.threads.executor.BRExecutor;
-import com.sumpay.tools.util.Utils;
-import com.sumpay.wallet.WalletsMaster;
-import com.sumpay.wallet.abstracts.BaseWalletManager;
+import com.sumfolio.BreadApp;
+import com.sumfolio.core.BRCoreKey;
+import com.sumfolio.tools.animation.UiUtils;
+import com.sumfolio.tools.crypto.Base58;
+import com.sumfolio.tools.manager.BRReportsManager;
+import com.sumfolio.tools.manager.BRSharedPrefs;
+import com.sumfolio.tools.crypto.CryptoHelper;
+import com.sumfolio.tools.security.BRKeyStore;
+import com.sumfolio.tools.threads.executor.BRExecutor;
+import com.sumfolio.tools.util.Utils;
+import com.sumfolio.wallet.WalletsMaster;
+import com.sumfolio.wallet.abstracts.BaseWalletManager;
 import com.platform.kvstore.RemoteKVStore;
 import com.platform.kvstore.ReplicatedKVStore;
 import com.platform.tools.TokenHolder;
@@ -50,7 +50,7 @@ import java.util.TimeZone;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import static com.sumpay.tools.manager.BRApiManager.HEADER_WALLET_ID;
+import static com.sumfolio.tools.manager.BRApiManager.HEADER_WALLET_ID;
 import io.sigpipe.jbsdiff.InvalidHeaderException;
 import io.sigpipe.jbsdiff.ui.FileUI;
 import okhttp3.Interceptor;
@@ -64,14 +64,14 @@ import okhttp3.ResponseBody;
 import okio.Buffer;
 import okio.BufferedSink;
 
-import static com.sumpay.tools.util.BRCompressor.gZipExtract;
+import static com.sumfolio.tools.util.BRCompressor.gZipExtract;
 
 
 /**
  * BreadWallet
  * <p/>
- * Created by Mihail Gutan on <mihail@sumpay.com> 9/29/16.
- * Copyright (c) 2016 sumpay LLC
+ * Created by Mihail Gutan on <mihail@sumfolio.com> 9/29/16.
+ * Copyright (c) 2016 sumfolio LLC
  * <p/>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal

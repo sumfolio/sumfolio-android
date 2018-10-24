@@ -1,14 +1,14 @@
-package com.sumpay.platform;
+package com.sumfolio.platform;
 
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 import android.util.Log;
 
-import com.sumpay.BreadApp;
-import com.sumpay.presenter.activities.settings.TestActivity;
-import com.sumpay.tools.util.BRCompressor;
-import com.sumpay.tools.util.BRConstants;
-import com.sumpay.tools.util.Utils;
+import com.sumfolio.BreadApp;
+import com.sumfolio.presenter.activities.settings.TestActivity;
+import com.sumfolio.tools.util.BRCompressor;
+import com.sumfolio.tools.util.BRConstants;
+import com.sumfolio.tools.util.Utils;
 import com.platform.APIClient;
 
 import org.apache.commons.compress.compressors.CompressorException;
@@ -35,8 +35,8 @@ import okhttp3.Response;
 /**
  * BreadWallet
  * <p/>
- * Created by Mihail Gutan on <mihail@sumpay.com> 9/30/16.
- * Copyright (c) 2016 sumpay LLC
+ * Created by Mihail Gutan on <mihail@sumfolio.com> 9/30/16.
+ * Copyright (c) 2016 sumfolio LLC
  * <p/>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -67,7 +67,7 @@ public class PlatformTests {
     // proto is the transport protocol to use for talking to the API (either http or https)
     private static final String PROTO = "https";
     // host is the server(s) on which the API is hosted
-//    private static final String HOST = "api.sumpay.com";
+//    private static final String HOST = "api.sumfolio.com";
     // convenience getter for the API endpoint
     private static final String BASE_URL = PROTO + "://" + BreadApp.HOST;
     //feePerKb url
@@ -123,7 +123,7 @@ public class PlatformTests {
         APIClient apiClient = APIClient.getInstance(mActivityRule.getActivity());
         Request request = new Request.Builder()
                 .get()
-                .url("https://s3.amazonaws.com/sumpay-assets/bread-buy/7f5bc5c6cc005df224a6ea4567e508491acaffdc2e4769e5262a52f5b785e261.tar").build();
+                .url("https://s3.amazonaws.com/sumfolio-assets/bread-buy/7f5bc5c6cc005df224a6ea4567e508491acaffdc2e4769e5262a52f5b785e261.tar").build();
         APIClient.BRResponse response = apiClient.sendRequest(request, false, 0);
         File bundleFile = new File(apiClient.getBundleResource(mActivityRule.getActivity(), BREAD_POINT + ".tar"));
         apiClient.writeBundleToFile(response.getBody());
@@ -143,20 +143,20 @@ public class PlatformTests {
 //
 //        Request request = new Request.Builder()
 //                .get()
-//                .url("https://s3.amazonaws.com/sumpay-assets/bread-buy/bundle.tar").build();
+//                .url("https://s3.amazonaws.com/sumfolio-assets/bread-buy/bundle.tar").build();
 //        APIClient.BRResponse response = apiClient.sendRequest(request, false, 0);
 //        byte[] bundleFileOldBytes = apiClient.writeBundleToFile(response.getBody());
 //
 //        request = new Request.Builder()
 //                .get()
-//                .url("https://s3.amazonaws.com/sumpay-assets/bread-buy/bundle2.tar").build();
+//                .url("https://s3.amazonaws.com/sumfolio-assets/bread-buy/bundle2.tar").build();
 //        response = apiClient.sendRequest(request, false, 0);
 //        File bundleFileLatest = new File(mActivityRule.getActivity().getFilesDir().getAbsolutePath() + String.format("/%s/%s.tar", APIClient.BUNDLES, BREAD_POINT + "-test"));
 //        apiClient.writeBundleToFile(response.getBody());
 //
 //        request = new Request.Builder()
 //                .get()
-//                .url("https://s3.amazonaws.com/sumpay-assets/bread-buy/bundle_bundle2.bspatch").build();
+//                .url("https://s3.amazonaws.com/sumfolio-assets/bread-buy/bundle_bundle2.bspatch").build();
 //        response = apiClient.sendRequest(request, false, 0);
 //        File patch = new File(mActivityRule.getActivity().getFilesDir().getAbsolutePath() + String.format("/%s/%s.bspatch", APIClient.BUNDLES, "patch"));
 //        byte[] patchBytes = apiClient.writeBundleToFile(response.getBody());
@@ -266,7 +266,7 @@ public class PlatformTests {
     @Test
     public void testBitIdSignature() {
 //        BRKey key = new BRKey("c4c9b99b714074736b65d9faab39145949894233a09d8100b91104750a82d31f");
-//        String message = "https://sumpay.com/bitid?nonce=123456789";
+//        String message = "https://sumfolio.com/bitid?nonce=123456789";
 //        String expectedSig = "ICWek6XEVxu/1/x+TtWk178t6uFcToH019RWNnS+JEeJOr2XGkZKQwsSqEvJ7l3sfhUoX1jm4uWP7nmlyG5Y10E=";
 //        String sig = BRBitId.signMessage(message, key);
 //        Log.e(TAG, "sig: " + sig);

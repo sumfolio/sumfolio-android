@@ -3,16 +3,16 @@ package com.platform.tools;
 import android.content.Context;
 import android.util.Log;
 
-import com.sumpay.presenter.entities.CurrencyEntity;
-import com.sumpay.tools.crypto.CryptoHelper;
-import com.sumpay.tools.manager.BRReportsManager;
-import com.sumpay.tools.manager.BRSharedPrefs;
-import com.sumpay.tools.sqlite.RatesDataSource;
-import com.sumpay.tools.util.BRCompressor;
-import com.sumpay.tools.util.BRConstants;
-import com.sumpay.tools.util.Utils;
-import com.sumpay.wallet.abstracts.BaseWalletManager;
-import com.sumpay.wallet.wallets.CryptoTransaction;
+import com.sumfolio.presenter.entities.CurrencyEntity;
+import com.sumfolio.tools.crypto.CryptoHelper;
+import com.sumfolio.tools.manager.BRReportsManager;
+import com.sumfolio.tools.manager.BRSharedPrefs;
+import com.sumfolio.tools.sqlite.RatesDataSource;
+import com.sumfolio.tools.util.BRCompressor;
+import com.sumfolio.tools.util.BRConstants;
+import com.sumfolio.tools.util.Utils;
+import com.sumfolio.wallet.abstracts.BaseWalletManager;
+import com.sumfolio.wallet.wallets.CryptoTransaction;
 import com.platform.APIClient;
 import com.platform.entities.TokenListMetaData;
 import com.platform.entities.TxMetaData;
@@ -36,8 +36,8 @@ import java.util.Map;
 /**
  * BreadWallet
  * <p/>
- * Created by Mihail Gutan on <mihail@sumpay.com> 6/22/17.
- * Copyright (c) 2017 sumpay LLC
+ * Created by Mihail Gutan on <mihail@sumfolio.com> 6/22/17.
+ * Copyright (c) 2017 sumfolio LLC
  * <p/>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal

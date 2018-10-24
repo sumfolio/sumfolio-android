@@ -1,0 +1,377 @@
+package com.sumfolio.tools.security;
+
+import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
+import android.security.keystore.UserNotAuthenticatedException;
+import android.support.annotation.WorkerThread;
+import android.text.format.DateUtils;
+import android.util.Log;
+
+import com.sumfolio.R;
+import com.sumfolio.core.BRCoreKey;
+import com.sumfolio.core.BRCoreMasterPubKey;
+import com.sumfolio.presenter.activities.InputPinActivity;
+import com.sumfolio.presenter.activities.PaperKeyActivity;
+import com.sumfolio.presenter.activities.PaperKeyProveActivity;
+import com.sumfolio.presenter.activities.intro.WriteDownActivity;
+import com.sumfolio.presenter.customviews.BRDialogView;
+import com.sumfolio.presenter.entities.CryptoRequest;
+import com.sumfolio.tools.animation.BRDialog;
+import com.sumfolio.tools.manager.BRReportsManager;
+import com.sumfolio.tools.manager.BRSharedPrefs;
+import com.sumfolio.tools.manager.SendManager;
+import com.sumfolio.tools.threads.executor.BRExecutor;
+import com.sumfolio.tools.util.BRConstants;
+import com.sumfolio.tools.util.Utils;
+import com.sumfolio.wallet.WalletsMaster;
+import com.sumfolio.wallet.abstracts.BaseWalletManager;
+import com.sumfolio.wallet.wallets.CryptoTransaction;
+import com.platform.entities.TxMetaData;
+import com.platform.tools.BRBitId;
+import com.platform.tools.KVStoreManager;
+
+import java.math.BigDecimal;
+import java.util.Arrays;
+
+
+/**
+ * BreadWallet
+ * <p/>
+ * Created by Mihail Gutan <mihail@sumfolio.com> on 4/14/16.
+ * Copyright (c) 2016 sumfolio LLC
+ * <p/>
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ * <p/>
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ * <p/>
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+
+public class PostAuth {
+    public static final String TAG = PostAuth.class.getName();
+
+    private String mCachedPaperKey;
+    public CryptoRequest mCryptoRequest;
+    //The user is stuck with endless authentication due to KeyStore bug.
+    public static boolean mAuthLoopBugHappened;
+    public static TxMetaData txMetaData;
+    public SendManager.SendCompletion mSendCompletion;
+    private BaseWalletManager mWalletManager;
+
+    private CryptoTransaction mPaymentProtocolTx;
+    private static PostAuth mInstance;
+
+    private PostAuth() {
+    }
+
+    public static PostAuth getInstance() {
+        if (mInstance == null) {
+            mInstance = new PostAuth();
+        }
+        return mInstance;
+    }
+
+    public void onCreateWalletAuth(final Activity activity, boolean authAsked) {
+        Log.e(TAG, "onCreateWalletAuth: " + authAsked);
+        long start = System.currentTimeMillis();
+        boolean success = WalletsMaster.getInstance(activity).generateRandomSeed(activity);
+        if (success) {
+            Intent intent = new Intent(activity, WriteDownActivity.class);
+            intent.putExtra(WriteDownActivity.EXTRA_VIEW_REASON, WriteDownActivity.ViewReason.NEW_WALLET.getValue());
+            activity.startActivity(intent);
+            activity.overridePendingTransition(R.anim.enter_from_right, R.anim.exit_to_left);
+            activity.finish();
+        } else {
+            if (authAsked) {
+                Log.e(TAG, "onCreateWalletAuth: WARNING!!!! LOOP");
+                mAuthLoopBugHappened = true;
+            }
+            return;
+        }
+    }
+
+    public void onPhraseCheckAuth(Activity activity, boolean authAsked) {
+        String cleanPhrase;
+        try {
+            byte[] raw = BRKeyStore.getPhrase(activity, BRConstants.SHOW_PHRASE_REQUEST_CODE);
+            if (raw == null) {
+                BRReportsManager.reportBug(new NullPointerException("onPhraseCheckAuth: getPhrase = null"), true);
+                return;
+            }
+            cleanPhrase = new String(raw);
+        } catch (UserNotAuthenticatedException e) {
+            if (authAsked) {
+                Log.e(TAG, "onPhraseCheckAuth: WARNING!!!! LOOP");
+                mAuthLoopBugHappened = true;
+            }
+            return;
+        }
+        Intent intent = new Intent(activity, PaperKeyActivity.class);
+        intent.putExtra("phrase", cleanPhrase);
+        activity.startActivity(intent);
+        activity.overridePendingTransition(R.anim.enter_from_bottom, R.anim.empty_300);
+    }
+
+    public void onPhraseProveAuth(Activity activity, boolean authAsked) {
+        String cleanPhrase;
+        try {
+            cleanPhrase = new String(BRKeyStore.getPhrase(activity, BRConstants.PROVE_PHRASE_REQUEST));
+        } catch (UserNotAuthenticatedException e) {
+            if (authAsked) {
+                Log.e(TAG, "onPhraseProveAuth: WARNING!!!! LOOP");
+                mAuthLoopBugHappened = true;
+            }
+            return;
+        }
+        Intent intent = new Intent(activity, PaperKeyProveActivity.class);
+        intent.putExtra("phrase", cleanPhrase);
+        activity.startActivity(intent);
+        activity.overridePendingTransition(R.anim.enter_from_right, R.anim.exit_to_left);
+    }
+
+    public void onBitIDAuth(Activity activity, boolean authenticated) {
+        BRBitId.completeBitID(activity, authenticated);
+    }
+
+    public void onRecoverWalletAuth(final Activity activity, boolean authAsked) {
+        if (Utils.isNullOrEmpty(mCachedPaperKey)) {
+            Log.e(TAG, "onRecoverWalletAuth: phraseForKeyStore is null or empty");
+            BRReportsManager.reportBug(new NullPointerException("onRecoverWalletAuth: phraseForKeyStore is or empty"));
+            return;
+        }
+
+        try {
+            boolean success = false;
+            try {
+                success = BRKeyStore.putPhrase(mCachedPaperKey.getBytes(),
+                        activity, BRConstants.PUT_PHRASE_RECOVERY_WALLET_REQUEST_CODE);
+            } catch (UserNotAuthenticatedException e) {
+                if (authAsked) {
+                    Log.e(TAG, "onRecoverWalletAuth: WARNING!!!! LOOP");
+                    mAuthLoopBugHappened = true;
+
+                }
+                return;
+            }
+
+            if (!success) {
+                if (authAsked)
+                    Log.e(TAG, "onRecoverWalletAuth, !success && authAsked");
+            } else {
+                if (mCachedPaperKey.length() != 0) {
+                    BRSharedPrefs.putPhraseWroteDown(activity, true);
+                    byte[] seed = BRCoreKey.getSeedFromPhrase(mCachedPaperKey.getBytes());
+                    byte[] authKey = BRCoreKey.getAuthPrivKeyForAPI(seed);
+                    BRKeyStore.putAuthKey(authKey, activity);
+                    BRCoreMasterPubKey mpk = new BRCoreMasterPubKey(mCachedPaperKey.getBytes(), true);
+                    BRKeyStore.putMasterPublicKey(mpk.serialize(), activity);
+
+                    Intent intent = new Intent(activity, InputPinActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    activity.overridePendingTransition(R.anim.enter_from_right, R.anim.exit_to_left);
+                    activity.startActivityForResult(intent, InputPinActivity.SET_PIN_REQUEST_CODE);
+
+                    mCachedPaperKey = null;
+                }
+
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            BRReportsManager.reportBug(e);
+        }
+
+    }
+
+    @WorkerThread
+    public void onPublishTxAuth(final Context activity, final BaseWalletManager wm, final boolean authAsked, final SendManager.SendCompletion completion) {
+        if (completion != null) {
+            mSendCompletion = completion;
+        }
+        if (wm != null) mWalletManager = wm;
+        byte[] rawPhrase;
+        try {
+            rawPhrase = BRKeyStore.getPhrase(activity, BRConstants.PAY_REQUEST_CODE);
+        } catch (UserNotAuthenticatedException e) {
+            if (authAsked) {
+                Log.e(TAG, "onPublishTxAuth: WARNING!!!! LOOP");
+                mAuthLoopBugHappened = true;
+            }
+            return;
+        }
+        try {
+            if (rawPhrase.length > 0) {
+                if (mCryptoRequest != null && mCryptoRequest.amount != null && mCryptoRequest.address != null) {
+
+                    CryptoTransaction tx = mWalletManager.createTransaction(mCryptoRequest.amount, mCryptoRequest.address);
+
+                    if (tx == null) {
+                        BRDialog.showCustomDialog(activity, activity.getString(R.string.Alert_error), activity.getString(R.string.Send_insufficientFunds),
+                                activity.getString(R.string.AccessibilityLabels_close), null, new BRDialogView.BROnClickListener() {
+                                    @Override
+                                    public void onClick(BRDialogView brDialogView) {
+                                        brDialogView.dismiss();
+                                    }
+                                }, null, null, 0);
+                        return;
+                    }
+                    final byte[] txHash = mWalletManager.signAndPublishTransaction(tx, rawPhrase);
+
+                    txMetaData = new TxMetaData();
+                    txMetaData.comment = mCryptoRequest.message;
+                    txMetaData.exchangeCurrency = BRSharedPrefs.getPreferredFiatIso(activity);
+                    BigDecimal fiatExchangeRate = mWalletManager.getFiatExchangeRate(activity);
+                    txMetaData.exchangeRate = fiatExchangeRate == null ? 0 : fiatExchangeRate.doubleValue();
+                    txMetaData.fee = mWalletManager.getTxFee(tx).toPlainString();
+                    txMetaData.txSize = tx.getTxSize().intValue();
+                    txMetaData.blockHeight = BRSharedPrefs.getLastBlockHeight(activity, mWalletManager.getIso());
+                    txMetaData.creationTime = (int) (System.currentTimeMillis() / DateUtils.SECOND_IN_MILLIS);
+                    txMetaData.deviceId = BRSharedPrefs.getDeviceId(activity);
+                    txMetaData.classVersion = 1;
+
+                    if (Utils.isNullOrEmpty(txHash)) {
+                        if (tx.getEtherTx() != null) {
+                            mWalletManager.watchTransactionForHash(tx, new BaseWalletManager.OnHashUpdated() {
+                                @Override
+                                public void onUpdated(String hash) {
+                                    if (mSendCompletion != null) {
+                                        mSendCompletion.onCompleted(hash, true);
+                                        stampMetaData(activity, txHash);
+                                        mSendCompletion = null;
+                                    }
+                                }
+                            });
+                            return; // ignore ETH since txs do not have the hash right away
+                        }
+                        Log.e(TAG, "onPublishTxAuth: signAndPublishTransaction returned an empty txHash");
+                        BRDialog.showSimpleDialog(activity, activity.getString(R.string.Alerts_sendFailure), "Failed to create transaction");
+                    } else {
+                        if (mSendCompletion != null) {
+                            mSendCompletion.onCompleted(tx.getHash(), true);
+                            mSendCompletion = null;
+                        }
+                        stampMetaData(activity, txHash);
+                    }
+
+                } else {
+                    throw new NullPointerException("payment item is null");
+                }
+            } else {
+                Log.e(TAG, "onPublishTxAuth: paperKey length is 0!");
+                BRReportsManager.reportBug(new NullPointerException("onPublishTxAuth: paperKey length is 0"));
+                return;
+            }
+        } finally {
+            Arrays.fill(rawPhrase, (byte) 0);
+            mCryptoRequest = null;
+        }
+
+    }
+
+    public static void stampMetaData(Context activity, byte[] txHash) {
+        if (txMetaData != null) {
+            KVStoreManager.getInstance().putTxMetaData(activity, txMetaData, txHash);
+            txMetaData = null;
+        } else Log.e(TAG, "stampMetaData: txMetaData is null!");
+    }
+
+    public void onPaymentProtocolRequest(final Activity activity, boolean authAsked) {
+        final byte[] paperKey;
+        try {
+            paperKey = BRKeyStore.getPhrase(activity, BRConstants.PAYMENT_PROTOCOL_REQUEST_CODE);
+        } catch (UserNotAuthenticatedException e) {
+            if (authAsked) {
+                Log.e(TAG, "onPaymentProtocolRequest: WARNING!!!! LOOP");
+                mAuthLoopBugHappened = true;
+            }
+            return;
+        }
+        if (paperKey == null || paperKey.length < 10 || mPaymentProtocolTx == null) {
+            Log.d(TAG, "onPaymentProtocolRequest() returned: rawSeed is malformed: " + (paperKey == null ? "" : paperKey.length));
+            return;
+        }
+
+        BRExecutor.getInstance().forLightWeightBackgroundTasks().execute(new Runnable() {
+            @Override
+            public void run() {
+                byte[] txHash = WalletsMaster.getInstance(activity).getCurrentWallet(activity).signAndPublishTransaction(mPaymentProtocolTx, paperKey);
+                if (Utils.isNullOrEmpty(txHash)) {
+                    Log.e(TAG, "run: txHash is null");
+                }
+                Arrays.fill(paperKey, (byte) 0);
+                mPaymentProtocolTx = null;
+            }
+        });
+
+    }
+
+    public void setCachedPaperKey(String paperKey) {
+        this.mCachedPaperKey = paperKey;
+    }
+
+    public void setPaymentItem(CryptoRequest cryptoRequest) {
+        this.mCryptoRequest = cryptoRequest;
+    }
+
+    public void setTmpPaymentRequestTx(CryptoTransaction tx) {
+        this.mPaymentProtocolTx = tx;
+    }
+
+    public void onCanaryCheck(final Activity activity, boolean authAsked) {
+        String canary = null;
+        try {
+            canary = BRKeyStore.getCanary(activity, BRConstants.CANARY_REQUEST_CODE);
+        } catch (UserNotAuthenticatedException e) {
+            if (authAsked) {
+                Log.e(TAG, "onCanaryCheck: WARNING!!!! LOOP");
+                mAuthLoopBugHappened = true;
+            }
+            return;
+        }
+        if (canary == null || !canary.equalsIgnoreCase(BRConstants.CANARY_STRING)) {
+            byte[] phrase;
+            try {
+                phrase = BRKeyStore.getPhrase(activity, BRConstants.CANARY_REQUEST_CODE);
+            } catch (UserNotAuthenticatedException e) {
+                if (authAsked) {
+                    Log.e(TAG, "onCanaryCheck: WARNING!!!! LOOP");
+                    mAuthLoopBugHappened = true;
+                }
+                return;
+            }
+
+            String strPhrase = new String((phrase == null) ? new byte[0] : phrase);
+            if (strPhrase.isEmpty()) {
+                WalletsMaster m = WalletsMaster.getInstance(activity);
+                m.wipeKeyStore(activity);
+                m.wipeWalletButKeystore(activity);
+            } else {
+                Log.e(TAG, "onCanaryCheck: Canary wasn't there, but the phrase persists, adding canary to keystore.");
+                try {
+                    BRKeyStore.putCanary(BRConstants.CANARY_STRING, activity, 0);
+                } catch (UserNotAuthenticatedException e) {
+                    if (authAsked) {
+                        Log.e(TAG, "onCanaryCheck: WARNING!!!! LOOP");
+                        mAuthLoopBugHappened = true;
+                    }
+                    return;
+                }
+            }
+        }
+        WalletsMaster.getInstance(activity).startTheWalletIfExists(activity);
+    }
+
+}

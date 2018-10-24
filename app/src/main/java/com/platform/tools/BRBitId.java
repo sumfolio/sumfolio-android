@@ -6,16 +6,16 @@ import android.security.keystore.UserNotAuthenticatedException;
 import android.util.Base64;
 import android.util.Log;
 
-import com.sumpay.core.BRCoreKey;
-import com.sumpay.core.BRCoreMasterPubKey;
-import com.sumpay.presenter.interfaces.BRAuthCompletion;
-import com.sumpay.tools.manager.BRSharedPrefs;
-import com.sumpay.tools.security.AuthManager;
-import com.sumpay.tools.security.BRKeyStore;
-import com.sumpay.tools.security.PostAuth;
-import com.sumpay.tools.threads.executor.BRExecutor;
-import com.sumpay.tools.util.BRConstants;
-import com.sumpay.tools.util.Utils;
+import com.sumfolio.core.BRCoreKey;
+import com.sumfolio.core.BRCoreMasterPubKey;
+import com.sumfolio.presenter.interfaces.BRAuthCompletion;
+import com.sumfolio.tools.manager.BRSharedPrefs;
+import com.sumfolio.tools.security.AuthManager;
+import com.sumfolio.tools.security.BRKeyStore;
+import com.sumfolio.tools.security.PostAuth;
+import com.sumfolio.tools.threads.executor.BRExecutor;
+import com.sumfolio.tools.util.BRConstants;
+import com.sumfolio.tools.util.Utils;
 import com.platform.APIClient;
 import com.platform.middlewares.plugins.WalletPlugin;
 
@@ -45,8 +45,8 @@ import okhttp3.Response;
 /**
  * BreadWallet
  * <p/>
- * Created by Mihail Gutan on <mihail@sumpay.com> 1/25/17.
- * Copyright (c) 2017 sumpay LLC
+ * Created by Mihail Gutan on <mihail@sumfolio.com> 1/25/17.
+ * Copyright (c) 2017 sumfolio LLC
  * <p/>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal

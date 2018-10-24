@@ -9,8 +9,8 @@ import okhttp3.Response;
 /**
  * BreadWallet
  * <p/>
- * Created by Mihail Gutan on <mihail@sumpay.com> 10/18/16.
- * Copyright (c) 2016 sumpay LLC
+ * Created by Mihail Gutan on <mihail@sumfolio.com> 10/18/16.
+ * Copyright (c) 2016 sumfolio LLC
  * <p/>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal

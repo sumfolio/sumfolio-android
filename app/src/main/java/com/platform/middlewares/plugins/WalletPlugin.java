@@ -4,21 +4,21 @@ import android.app.Activity;
 import android.content.Context;
 import android.util.Log;
 
-import com.sumpay.BreadApp;
-import com.sumpay.presenter.entities.CryptoRequest;
-import com.sumpay.presenter.interfaces.BRAuthCompletion;
-import com.sumpay.tools.animation.BRDialog;
-import com.sumpay.tools.manager.BREventManager;
-import com.sumpay.tools.manager.BRReportsManager;
-import com.sumpay.tools.manager.BRSharedPrefs;
-import com.sumpay.tools.manager.SendManager;
-import com.sumpay.tools.security.AuthManager;
-import com.sumpay.tools.threads.executor.BRExecutor;
-import com.sumpay.tools.util.BRConstants;
-import com.sumpay.tools.util.Utils;
-import com.sumpay.wallet.WalletsMaster;
-import com.sumpay.wallet.abstracts.BaseWalletManager;
-import com.sumpay.wallet.wallets.sumcoin.WalletSumcoinManager;
+import com.sumfolio.BreadApp;
+import com.sumfolio.presenter.entities.CryptoRequest;
+import com.sumfolio.presenter.interfaces.BRAuthCompletion;
+import com.sumfolio.tools.animation.BRDialog;
+import com.sumfolio.tools.manager.BREventManager;
+import com.sumfolio.tools.manager.BRReportsManager;
+import com.sumfolio.tools.manager.BRSharedPrefs;
+import com.sumfolio.tools.manager.SendManager;
+import com.sumfolio.tools.security.AuthManager;
+import com.sumfolio.tools.threads.executor.BRExecutor;
+import com.sumfolio.tools.util.BRConstants;
+import com.sumfolio.tools.util.Utils;
+import com.sumfolio.wallet.WalletsMaster;
+import com.sumfolio.wallet.abstracts.BaseWalletManager;
+import com.sumfolio.wallet.wallets.sumcoin.WalletSumcoinManager;
 import com.platform.APIClient;
 import com.platform.BRHTTPHelper;
 import com.platform.interfaces.Plugin;
@@ -47,8 +47,8 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * BreadWallet
  * <p/>
- * Created by Mihail Gutan on <mihail@sumpay.com> 11/2/16.
- * Copyright (c) 2016 sumpay LLC
+ * Created by Mihail Gutan on <mihail@sumfolio.com> 11/2/16.
+ * Copyright (c) 2016 sumfolio LLC
  * <p/>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal

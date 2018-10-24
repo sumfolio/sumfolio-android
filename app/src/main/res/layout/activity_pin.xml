@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.sumpay.presenter.customviews.BRLockScreenConstraintLayout
+<com.sumfolio.presenter.customviews.BRLockScreenConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_pit"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.sumpay.presenter.activities.LoginActivity">
+    tools:context="com.sumfolio.presenter.activities.LoginActivity">
 
 
-    <com.sumpay.presenter.customviews.BaseTextView
+    <com.sumfolio.presenter.customviews.BaseTextView
         android:id="@+id/scan"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,7 +44,7 @@
 
 
 
-    <com.sumpay.presenter.customviews.PinLayout
+    <com.sumfolio.presenter.customviews.PinLayout
         android:id="@+id/pin_digits"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -58,9 +58,9 @@
         app:layout_constraintTop_toBottomOf="@+id/title"
         app:layout_constraintVertical_bias="0.75">
 
-    </com.sumpay.presenter.customviews.PinLayout>
+    </com.sumfolio.presenter.customviews.PinLayout>
 
-    <com.sumpay.presenter.customviews.BRKeyboard
+    <com.sumfolio.presenter.customviews.BRKeyboard
         android:id="@+id/brkeyboard"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -86,7 +86,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <com.sumpay.presenter.customviews.BRButton
+        <com.sumfolio.presenter.customviews.BRButton
             android:id="@+id/left_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -101,7 +101,7 @@
             app:isBreadButton="false"
             />
 
-        <com.sumpay.presenter.customviews.BRButton
+        <com.sumfolio.presenter.customviews.BRButton
             android:id="@+id/right_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -131,7 +131,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
-    <com.sumpay.presenter.customviews.BaseTextView
+    <com.sumfolio.presenter.customviews.BaseTextView
         android:id="@+id/unlocked_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -159,4 +159,4 @@
         app:layout_constraintBottom_toBottomOf="@+id/brkeyboard"
         app:layout_constraintRight_toRightOf="parent"/>
 
-</com.sumpay.presenter.customviews.BRLockScreenConstraintLayout>
+</com.sumfolio.presenter.customviews.BRLockScreenConstraintLayout>

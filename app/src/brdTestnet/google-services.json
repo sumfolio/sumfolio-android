@@ -1,9 +1,9 @@
 {
   "project_info": {
     "project_number": "1094171723819",
-    "firebase_url": "https://sumpay-c14dc.firebaseio.com",
-    "project_id": "sumpay-c14dc",
-    "storage_bucket": "sumpay-c14dc.appspot.com"
+    "firebase_url": "https://sumfolio-c14dc.firebaseio.com",
+    "project_id": "sumfolio-c14dc",
+    "storage_bucket": "sumfolio-c14dc.appspot.com"
   },
   "client": [
     {
@@ -18,7 +18,7 @@
           "client_id": "1094171723819-gdgb2nmdcjufsraushmbn7a2mobldupf.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.sumpay",
+            "package_name": "com.sumfolio",
             "certificate_hash": "f29c30b418eb982b9c042828e5a625e0e294ec71"
           }
         },

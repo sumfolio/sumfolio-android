@@ -1,4 +1,4 @@
-//package com.sumpay.presenter.currencyformatting.tests;
+//package com.sumfolio.presenter.currencyformatting.tests;
 //
 //import android.test.AndroidTestCase;
 //

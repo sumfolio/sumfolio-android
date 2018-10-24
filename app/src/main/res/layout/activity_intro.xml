@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.sumpay.presenter.customviews.BRLockScreenConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.sumfolio.presenter.customviews.BRLockScreenConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/intro_layout"
     android:layout_width="match_parent"
@@ -18,7 +18,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.sumpay.presenter.customviews.BRButton
+    <com.sumfolio.presenter.customviews.BRButton
         android:id="@+id/button_new_wallet"
         android:layout_width="0dp"
         android:layout_height="80dp"
@@ -35,7 +35,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
 
-    <com.sumpay.presenter.customviews.BRButton
+    <com.sumfolio.presenter.customviews.BRButton
         android:id="@+id/button_recover_wallet"
         android:layout_width="0dp"
         android:layout_height="80dp"
@@ -52,7 +52,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
 
-    <com.sumpay.presenter.customviews.BaseTextView
+    <com.sumfolio.presenter.customviews.BaseTextView
         android:id="@+id/intro_subtitle"
         android:layout_width="240dp"
         android:layout_height="wrap_content"
@@ -99,4 +99,4 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
-</com.sumpay.presenter.customviews.BRLockScreenConstraintLayout>
+</com.sumfolio.presenter.customviews.BRLockScreenConstraintLayout>

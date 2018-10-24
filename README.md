@@ -4,11 +4,11 @@
 # Sumfolio for Android
 
 [![download](/images/icon-google-play.png)]
-(https://play.google.com/store/apps/details?id=com.sumpay)
+(https://play.google.com/store/apps/details?id=com.sumfolio)
 
 ## Sumcoin Wallet
 
-This is the Android port of the sumpay iOS app, which can be found [here](https://github.com/sumpay/sumpay/).
+This is the Android port of the sumfolio iOS app, which can be found [here](https://github.com/sumfolio/sumfolio/).
 
 ## A completely standalone sumcoin wallet:
 

@@ -6,12 +6,12 @@ import android.content.Intent;
 import android.net.Uri;
 import android.util.Log;
 
-import com.sumpay.BreadApp;
-import com.sumpay.R;
-import com.sumpay.presenter.activities.settings.WebViewActivity;
-import com.sumpay.tools.manager.BRReportsManager;
-import com.sumpay.tools.util.BRConstants;
-import com.sumpay.tools.util.Utils;
+import com.sumfolio.BreadApp;
+import com.sumfolio.R;
+import com.sumfolio.presenter.activities.settings.WebViewActivity;
+import com.sumfolio.tools.manager.BRReportsManager;
+import com.sumfolio.tools.util.BRConstants;
+import com.sumfolio.tools.util.Utils;
 import com.platform.APIClient;
 import com.platform.BRHTTPHelper;
 import com.platform.interfaces.Plugin;
@@ -26,8 +26,8 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * BreadWallet
  * <p/>
- * Created by Mihail Gutan on <mihail@sumpay.com> 11/2/16.
- * Copyright (c) 2016 sumpay LLC
+ * Created by Mihail Gutan on <mihail@sumfolio.com> 11/2/16.
+ * Copyright (c) 2016 sumfolio LLC
  * <p/>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal

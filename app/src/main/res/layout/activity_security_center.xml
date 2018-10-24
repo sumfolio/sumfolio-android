@@ -1,4 +1,4 @@
-<com.sumpay.presenter.customviews.BRRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.sumfolio.presenter.customviews.BRRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                                                         xmlns:app="http://schemas.android.com/apk/res-auto"
                                                         android:id="@+id/layout"
                                                         android:layout_width="match_parent"
@@ -34,7 +34,7 @@
                 android:background="@drawable/ic_close_white_24dp"
                 />
 
-            <com.sumpay.presenter.customviews.BaseTextView
+            <com.sumfolio.presenter.customviews.BaseTextView
                 android:id="@+id/title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -68,7 +68,7 @@
 
     </LinearLayout>
 
-    <com.sumpay.presenter.customviews.BaseTextView
+    <com.sumfolio.presenter.customviews.BaseTextView
         android:id="@+id/textView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -91,4 +91,4 @@
 
     </ListView>
 
-</com.sumpay.presenter.customviews.BRRelativeLayout>
+</com.sumfolio.presenter.customviews.BRRelativeLayout>

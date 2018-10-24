@@ -1,4 +1,4 @@
-package com.sumpay.database;
+package com.sumfolio.database;
 
 import android.app.Activity;
 import android.support.test.filters.LargeTest;
@@ -6,18 +6,18 @@ import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 import android.util.Log;
 
-import com.sumpay.presenter.activities.settings.TestActivity;
-import com.sumpay.presenter.entities.BRMerkleBlockEntity;
-import com.sumpay.presenter.entities.BRPeerEntity;
-import com.sumpay.presenter.entities.BRTransactionEntity;
-import com.sumpay.presenter.entities.BlockEntity;
-import com.sumpay.presenter.entities.CurrencyEntity;
-import com.sumpay.presenter.entities.PeerEntity;
-import com.sumpay.tools.sqlite.BtcBchTransactionDataStore;
-import com.sumpay.tools.sqlite.RatesDataSource;
-import com.sumpay.tools.sqlite.MerkleBlockDataSource;
-import com.sumpay.tools.sqlite.PeerDataSource;
-import com.sumpay.tools.threads.executor.BRExecutor;
+import com.sumfolio.presenter.activities.settings.TestActivity;
+import com.sumfolio.presenter.entities.BRMerkleBlockEntity;
+import com.sumfolio.presenter.entities.BRPeerEntity;
+import com.sumfolio.presenter.entities.BRTransactionEntity;
+import com.sumfolio.presenter.entities.BlockEntity;
+import com.sumfolio.presenter.entities.CurrencyEntity;
+import com.sumfolio.presenter.entities.PeerEntity;
+import com.sumfolio.tools.sqlite.BtcBchTransactionDataStore;
+import com.sumfolio.tools.sqlite.RatesDataSource;
+import com.sumfolio.tools.sqlite.MerkleBlockDataSource;
+import com.sumfolio.tools.sqlite.PeerDataSource;
+import com.sumfolio.tools.threads.executor.BRExecutor;
 
 import org.junit.After;
 import org.junit.Assert;
@@ -34,8 +34,8 @@ import java.util.concurrent.CountDownLatch;
 /**
  * BreadWallet
  * <p/>
- * Created by Mihail Gutan on <mihail@sumpay.com> 9/30/16.
- * Copyright (c) 2016 sumpay LLC
+ * Created by Mihail Gutan on <mihail@sumfolio.com> 9/30/16.
+ * Copyright (c) 2016 sumfolio LLC
  * <p/>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal

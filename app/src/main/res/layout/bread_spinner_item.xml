@@ -17,7 +17,7 @@
 ** limitations under the License.
 */
 -->
-<com.sumpay.presenter.customviews.BaseTextView
+<com.sumfolio.presenter.customviews.BaseTextView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@android:id/text1"
     style="?android:attr/spinnerItemStyle"

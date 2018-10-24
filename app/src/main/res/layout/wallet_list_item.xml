@@ -24,7 +24,7 @@
             android:layout_centerVertical="true"/>
     </RelativeLayout>
 
-    <com.sumpay.presenter.customviews.BaseTextView
+    <com.sumfolio.presenter.customviews.BaseTextView
         android:id="@+id/wallet_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -35,7 +35,7 @@
         android:textSize="18sp"
         app:customTFont="CircularPro-Bold.otf"/>
 
-    <com.sumpay.presenter.customviews.BaseTextView
+    <com.sumfolio.presenter.customviews.BaseTextView
         android:id="@+id/wallet_trade_price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -46,7 +46,7 @@
         android:textSize="14sp"
         app:customTFont="CircularPro-Bold.otf"/>
 
-    <com.sumpay.presenter.customviews.BaseTextView
+    <com.sumfolio.presenter.customviews.BaseTextView
         android:id="@+id/wallet_balance_fiat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -59,7 +59,7 @@
         android:textSize="18sp"
         app:customTFont="CircularPro-Bold.otf"/>
 
-    <com.sumpay.presenter.customviews.BaseTextView
+    <com.sumfolio.presenter.customviews.BaseTextView
         android:id="@+id/syncing_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -86,7 +86,7 @@
         android:indeterminateTint="@color/sync_text"
         android:keepScreenOn="true"/>
 
-    <com.sumpay.presenter.customviews.BaseTextView
+    <com.sumfolio.presenter.customviews.BaseTextView
         android:id="@+id/wallet_balance_currency"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
