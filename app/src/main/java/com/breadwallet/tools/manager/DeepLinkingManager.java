@@ -34,7 +34,7 @@ import com.breadwallet.wallet.util.CryptoUriParser;
  */
 public class DeepLinkingManager {
     private static final String TAG = DeepLinkingManager.class.getSimpleName();
-    public static final String SCHEME_BITCOIN = "bitcoin";
+    public static final String SCHEME_BITCOIN = "sumcoin";
     public static final String SCHEME_BREAD = "bread";
     public static final String SCHEME_BCH = "bitcoincash";
     public static final String SCHEME_BCH_TESTNET = "bchtest";

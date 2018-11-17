@@ -161,7 +161,7 @@ public class BRApiManager {
 
         for (final BaseWalletManager w : list) {
             //only update stuff for non erc20 for now, API endpoint BUG
-            if (w.getIso().equalsIgnoreCase("BTC") || w.getIso().equalsIgnoreCase("BCH")
+            if (w.getIso().equalsIgnoreCase("SUM") || w.getIso().equalsIgnoreCase("BCH")
                     || w.getIso().equalsIgnoreCase("ETH")) {
                 BRExecutor.getInstance().forLightWeightBackgroundTasks().execute(new Runnable() {
                     @Override
@@ -207,7 +207,7 @@ public class BRApiManager {
                     continue;
                 }
                 JSONObject json = (JSONObject) obj;
-                String code = "BTC";
+                String code = "SUM";
                 String name = json.getString("name");
                 String rate = json.getString("price_btc");
                 String iso = json.getString("symbol");
@@ -247,8 +247,8 @@ public class BRApiManager {
 
     @WorkerThread
     public static JSONArray fetchRates(Context app, BaseWalletManager walletManager) {
-        String url = "https://" + BreadApp.HOST + "/rates?currency=" + walletManager.getIso();
-        //String url = "https://sumcoinindex.com/rates/";
+        //String url = "https://" + BreadApp.HOST + "/rates?currency=" + walletManager.getIso();
+        String url = "http://159.65.72.249/sumprice/price.json";
         String jsonString = urlGET(app, url);
         JSONArray jsonArray = null;
         if (jsonString == null) {
@@ -261,7 +261,7 @@ public class BRApiManager {
 
         } catch (JSONException ignored) {
         }
-        jsonArray = null;
+        //jsonArray = null;
         return jsonArray == null ? backupFetchRates(app, walletManager) : jsonArray;
     }
 

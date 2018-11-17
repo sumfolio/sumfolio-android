@@ -197,12 +197,12 @@ public class WalletTests {
         float brdRate = 0.00005f;
 
         Set<CurrencyEntity> tmp = new HashSet<>();
-        tmp.add(new CurrencyEntity("USD", "Dollar", btcRate, "BTC"));
-        tmp.add(new CurrencyEntity("BTC", "Bitcoin", ethRate, "ETH"));
-        tmp.add(new CurrencyEntity("BTC", "Bitcoin", brdRate, "BRD"));
+        tmp.add(new CurrencyEntity("USD", "Dollar", btcRate, "SUM"));
+        tmp.add(new CurrencyEntity("SUM", "Sumcoin", ethRate, "ETH"));
+        tmp.add(new CurrencyEntity("SUM", "Sumcoin", brdRate, "BRD"));
         RatesDataSource.getInstance(app).putCurrencies(app, tmp);
 
-        BRSharedPrefs.putCryptoDenomination(app, "BTC", BRConstants.CURRENT_UNIT_BITCOINS);
+        BRSharedPrefs.putCryptoDenomination(app, "SUM", BRConstants.CURRENT_UNIT_BITCOINS);
 
         //getCryptoForSmallestCrypto(..)
         BigDecimal val = new BigDecimal(20000);
@@ -230,7 +230,7 @@ public class WalletTests {
         Assert.assertEquals(res.doubleValue(), 0.5, 0); //dollars
 
 
-        BRSharedPrefs.putCryptoDenomination(app, "BTC", BRConstants.CURRENT_UNIT_BITS);
+        BRSharedPrefs.putCryptoDenomination(app, "SUM", BRConstants.CURRENT_UNIT_BITS);
 
         //getCryptoForSmallestCrypto(..)
         val = new BigDecimal(20000);

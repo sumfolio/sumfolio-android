@@ -310,7 +310,7 @@ public class CryptoUriParser {
             if (iso.equalsIgnoreCase("ETH")) {
                 BigDecimal ethAmount = cryptoAmount.divide(new BigDecimal(WalletEthManager.ETHER_WEI), 3, BRConstants.ROUNDING_MODE);
                 builder = builder.appendQueryParameter("value", ethAmount.toPlainString() + "e18");
-            } else if (iso.equalsIgnoreCase("BTC") || iso.equalsIgnoreCase("BCH")) {
+            } else if (iso.equalsIgnoreCase("SUM") || iso.equalsIgnoreCase("BCH")) {
                 BigDecimal amount = cryptoAmount.divide(new BigDecimal(BaseBitcoinWalletManager.ONE_BITCOIN_IN_SATOSHIS), 8, BRConstants.ROUNDING_MODE);
                 builder = builder.appendQueryParameter("amount", amount.toPlainString());
             } else {

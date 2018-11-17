@@ -112,7 +112,7 @@ public class WalletTokenManager extends BaseEthereumWalletManager {
         String address = mTokenIsos.get(iso.toLowerCase());
         address = address == null ? null : address.toLowerCase();
         if (address == null) {
-            if (!iso.equalsIgnoreCase("BTC") && !iso.equalsIgnoreCase("BCH") && !iso.equalsIgnoreCase("ETH"))
+            if (!iso.equalsIgnoreCase("SUM") && !iso.equalsIgnoreCase("BCH") && !iso.equalsIgnoreCase("ETH"))
                 BRReportsManager.reportBug(new NullPointerException("getTokenWalletByIso: address is null for: " + iso));
             return null;
         }
@@ -462,10 +462,10 @@ public class WalletTokenManager extends BaseEthereumWalletManager {
     //erc20 rates are in BTC (thus this math)
     private BigDecimal getFiatForToken(Context app, BigDecimal tokenAmount, String code) {
         //fiat rate for btc
-        CurrencyEntity btcRate = RatesDataSource.getInstance(app).getCurrencyByCode(app, "BTC", code);
+        CurrencyEntity btcRate = RatesDataSource.getInstance(app).getCurrencyByCode(app, "SUM", code);
 
         //Btc rate for the token
-        CurrencyEntity tokenBtcRate = RatesDataSource.getInstance(app).getCurrencyByCode(app, getIso(), "BTC");
+        CurrencyEntity tokenBtcRate = RatesDataSource.getInstance(app).getCurrencyByCode(app, getIso(), "SUM");
         if (btcRate == null) {
             Log.e(TAG, "getUsdFromBtc: No USD rates for BTC");
             return null;
@@ -483,9 +483,9 @@ public class WalletTokenManager extends BaseEthereumWalletManager {
     //Token rates are in BTC (thus this math)
     private BigDecimal getTokensForFiat(Context app, BigDecimal fiatAmount, String code) {
         //fiat rate for btc
-        CurrencyEntity btcRate = RatesDataSource.getInstance(app).getCurrencyByCode(app, "BTC", code);
+        CurrencyEntity btcRate = RatesDataSource.getInstance(app).getCurrencyByCode(app, "SUM", code);
         //Btc rate for token
-        CurrencyEntity tokenBtcRate = RatesDataSource.getInstance(app).getCurrencyByCode(app, getIso(), "BTC");
+        CurrencyEntity tokenBtcRate = RatesDataSource.getInstance(app).getCurrencyByCode(app, getIso(), "SUM");
         if (btcRate == null) {
             Log.e(TAG, "getUsdFromBtc: No USD rates for BTC");
             return null;

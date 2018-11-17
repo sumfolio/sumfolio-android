@@ -40,7 +40,7 @@ public class TokenListMetaData {
      * <p>
      * {
      * “classVersion”: 2, //used for versioning the schema
-     * "enabledCurrencies": ["btc":"eth": "erc20:0xsd98fjetc"] enabled currencies
+     * "enabledCurrencies": ["sum":"eth": "erc20:0xsd98fjetc"] enabled currencies
      * "hiddenCurrencies": "bch"] hidden currencies
      * }
      */
@@ -55,7 +55,7 @@ public class TokenListMetaData {
 
         if (this.enabledCurrencies == null) {
             this.enabledCurrencies = new ArrayList<>();
-            this.enabledCurrencies.add(new TokenInfo("BTC", false, null));
+            this.enabledCurrencies.add(new TokenInfo("SUM", false, null));
             this.enabledCurrencies.add(new TokenInfo("BCH", false, null));
             this.enabledCurrencies.add(new TokenInfo("ETH", false, null));
         }

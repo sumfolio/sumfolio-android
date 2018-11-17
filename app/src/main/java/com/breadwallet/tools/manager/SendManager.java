@@ -73,7 +73,7 @@ public class SendManager {
             sending = true;
             long now = System.currentTimeMillis();
             //if the fee (for BTC and BCH only) was updated more than 24 hours ago then try updating the fee
-            if (walletManager.getIso().equalsIgnoreCase("BTC") || walletManager.getIso().equalsIgnoreCase("BCH")) {
+            if (walletManager.getIso().equalsIgnoreCase("SUM") || walletManager.getIso().equalsIgnoreCase("BCH")) {
                 if (now - BRSharedPrefs.getFeeTime(app, walletManager.getIso()) >= FEE_EXPIRATION_MILLIS) {
                     new Thread(new Runnable() {
                         @Override

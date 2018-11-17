@@ -291,7 +291,7 @@ public class BRSharedPrefs {
 
     public static String getCurrentWalletIso(Context activity) {
         SharedPreferences prefs = activity.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
-        return prefs.getString("currentWalletIso", "BTC");
+        return prefs.getString("currentWalletIso", "SUM");
     }
 
     public static void putCurrentWalletIso(Context activity, String iso) {

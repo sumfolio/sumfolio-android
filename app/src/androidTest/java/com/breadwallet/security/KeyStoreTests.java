@@ -236,10 +236,10 @@ public class KeyStoreTests {
         BigDecimal spendLimitBtc = new BigDecimal(1000);
         BigDecimal spendLimitEth = new BigDecimal(800);
         BigDecimal spendLimitBch = new BigDecimal(600);
-        BRKeyStore.putSpendLimit(mActivityRule.getActivity(), spendLimitBtc, "BTC");
+        BRKeyStore.putSpendLimit(mActivityRule.getActivity(), spendLimitBtc, "SUM");
         BRKeyStore.putSpendLimit(mActivityRule.getActivity(), spendLimitEth, "ETH");
         BRKeyStore.putSpendLimit(mActivityRule.getActivity(), spendLimitBch, "BCH");
-        BigDecimal freshLimitBtc = BRKeyStore.getSpendLimit(mActivityRule.getActivity(), "BTC");
+        BigDecimal freshLimitBtc = BRKeyStore.getSpendLimit(mActivityRule.getActivity(), "SUM");
         BigDecimal freshLimitEth = BRKeyStore.getSpendLimit(mActivityRule.getActivity(), "ETH");
         BigDecimal freshLimitBch = BRKeyStore.getSpendLimit(mActivityRule.getActivity(), "BCH");
         Assert.assertNotNull(freshLimitBtc);
@@ -273,9 +273,9 @@ public class KeyStoreTests {
         BRKeyStore.putPinCode("0123", mActivityRule.getActivity());
         BRKeyStore.putFailCount(3, mActivityRule.getActivity());
         BRKeyStore.putFailTimeStamp(1479686841, mActivityRule.getActivity());
-        BRKeyStore.putSpendLimit(mActivityRule.getActivity(), new BigDecimal(10000000), "BTC");
+        BRKeyStore.putSpendLimit(mActivityRule.getActivity(), new BigDecimal(10000000), "SUM");
         BRKeyStore.putLastPinUsedTime(1479686841, mActivityRule.getActivity());
-        BRKeyStore.putTotalLimit(mActivityRule.getActivity(), new BigDecimal(1479686841), "BTC");
+        BRKeyStore.putTotalLimit(mActivityRule.getActivity(), new BigDecimal(1479686841), "SUM");
         BRKeyStore.putEthPublicKey("26wZYDdvpmCrYZeUcxgqd1KquN4o6wXwLomBW5SjnwUqG".getBytes(), mActivityRule.getActivity());
 
         for (String a : aliasObjectMap.keySet()) {

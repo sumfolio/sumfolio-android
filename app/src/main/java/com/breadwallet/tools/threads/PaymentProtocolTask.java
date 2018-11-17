@@ -81,7 +81,7 @@ public class PaymentProtocolTask extends AsyncTask<String, String, String> {
             Log.e(TAG, "the uri: " + params[0]);
             URL url = new URL(params[0]);
             BaseWalletManager wm = WalletsMaster.getInstance(app).getCurrentWallet(app);
-            if (!wm.getIso().equalsIgnoreCase("BTC") && !wm.getIso().equalsIgnoreCase("BCH")) {
+            if (!wm.getIso().equalsIgnoreCase("SUM") && !wm.getIso().equalsIgnoreCase("BCH")) {
                 throw new RuntimeException("Can't happen, Payment protocol for: " + wm.getIso());
             }
             urlConnection = (HttpURLConnection) url.openConnection();
@@ -278,7 +278,7 @@ public class PaymentProtocolTask extends AsyncTask<String, String, String> {
             allAddresses.append(output.getAddress()).append(", ");
         }
         final BaseWalletManager wm = WalletsMaster.getInstance(app).getCurrentWallet(app);
-        BRCoreWallet coreWallet = wm.getIso().equalsIgnoreCase("BTC") ? ((WalletBitcoinManager) wm).getWallet() : ((WalletBchManager) wm).getWallet();
+        BRCoreWallet coreWallet = wm.getIso().equalsIgnoreCase("SUM") ? ((WalletBitcoinManager) wm).getWallet() : ((WalletBchManager) wm).getWallet();
         final BRCoreTransaction trans = coreWallet.createTransactionForOutputs(paymentProtocolRequest.getOutputs());
         if (trans == null) {
             BRDialog.showSimpleDialog(app, "Insufficient funds", "");

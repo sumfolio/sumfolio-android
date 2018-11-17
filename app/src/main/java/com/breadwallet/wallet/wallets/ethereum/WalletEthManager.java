@@ -591,9 +591,9 @@ public class WalletEthManager extends BaseEthereumWalletManager implements  BREt
     //ETH rates are in BTC (thus this math)
     private BigDecimal getFiatForEth(Context app, BigDecimal ethAmount, String code) {
         //fiat rate for btc
-        CurrencyEntity btcRate = RatesDataSource.getInstance(app).getCurrencyByCode(app, "BTC", code);
+        CurrencyEntity btcRate = RatesDataSource.getInstance(app).getCurrencyByCode(app, "SUM", code);
         //Btc rate for ether
-        CurrencyEntity ethBtcRate = RatesDataSource.getInstance(app).getCurrencyByCode(app, getIso(), "BTC");
+        CurrencyEntity ethBtcRate = RatesDataSource.getInstance(app).getCurrencyByCode(app, getIso(), "SUM");
         if (btcRate == null) {
             Log.e(TAG, "getUsdFromBtc: No USD rates for BTC");
             return null;
@@ -610,9 +610,9 @@ public class WalletEthManager extends BaseEthereumWalletManager implements  BREt
     //ETH rates are in BTC (thus this math)
     private BigDecimal getEthForFiat(Context app, BigDecimal fiatAmount, String code) {
         //fiat rate for btc
-        CurrencyEntity btcRate = RatesDataSource.getInstance(app).getCurrencyByCode(app, "BTC", code);
+        CurrencyEntity btcRate = RatesDataSource.getInstance(app).getCurrencyByCode(app, "SUM", code);
         //Btc rate for ether
-        CurrencyEntity ethBtcRate = RatesDataSource.getInstance(app).getCurrencyByCode(app, getIso(), "BTC");
+        CurrencyEntity ethBtcRate = RatesDataSource.getInstance(app).getCurrencyByCode(app, getIso(), "SUM");
         if (btcRate == null) {
             Log.e(TAG, "getUsdFromBtc: No USD rates for BTC");
             return null;

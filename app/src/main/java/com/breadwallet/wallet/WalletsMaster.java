@@ -97,7 +97,7 @@ public class WalletsMaster {
         mTokenListMetaData = KVStoreManager.getInstance().getTokenListMetaData(app);
         if (mTokenListMetaData == null) {
             List<TokenListMetaData.TokenInfo> enabled = new ArrayList<>();
-            enabled.add(new TokenListMetaData.TokenInfo("BTC", false, null));
+            enabled.add(new TokenListMetaData.TokenInfo("SUM", false, null));
             //enabled.add(new TokenListMetaData.TokenInfo("BCH", false, null));
             //enabled.add(new TokenListMetaData.TokenInfo("ETH", false, null));
             //BREthereumWallet brdWallet = ethWallet.node.getWallet(ethWallet.node.tokenBRD);
@@ -111,7 +111,7 @@ public class WalletsMaster {
 
             boolean isHidden = mTokenListMetaData.isCurrencyHidden(enabled.symbol);
 
-            if (enabled.symbol.equalsIgnoreCase("BTC") && !isHidden) {
+            if (enabled.symbol.equalsIgnoreCase("SUM") && !isHidden) {
                 //BTC wallet
                 mWallets.add(WalletBitcoinManager.getInstance(app));
             } else if (enabled.symbol.equalsIgnoreCase("BCH") && !isHidden) {
@@ -142,7 +142,7 @@ public class WalletsMaster {
 //        Log.d(TAG, "getWalletByIso() Getting wallet by ISO -> " + iso);
         if (Utils.isNullOrEmpty(iso))
             throw new RuntimeException("getWalletByIso with iso = null, Cannot happen!");
-        if (iso.equalsIgnoreCase("BTC"))
+        if (iso.equalsIgnoreCase("SUM"))
             return WalletBitcoinManager.getInstance(app);
         if (iso.equalsIgnoreCase("BCH"))
             return WalletBchManager.getInstance(app);

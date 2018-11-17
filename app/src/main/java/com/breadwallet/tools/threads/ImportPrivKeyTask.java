@@ -94,7 +94,7 @@ public class ImportPrivKeyTask extends AsyncTask<String, String, String> {
             return null;
         }
 
-        if (!iso.equalsIgnoreCase("BTC") && !iso.equalsIgnoreCase("BCH")) {
+        if (!iso.equalsIgnoreCase("SUM") && !iso.equalsIgnoreCase("BCH")) {
             throw new NullPointerException("Can't happen, iso is: " + iso);
         }
 
@@ -110,7 +110,7 @@ public class ImportPrivKeyTask extends AsyncTask<String, String, String> {
             return null;
         }
 
-        if (!iso.equalsIgnoreCase("BTC") && !iso.equalsIgnoreCase("BCH")) {
+        if (!iso.equalsIgnoreCase("SUM") && !iso.equalsIgnoreCase("BCH")) {
             String err = "doInBackground: Can't happen, uknown iso: " + iso;
             BRReportsManager.reportBug(new NullPointerException(err));
             Log.e(TAG, err);
@@ -190,7 +190,7 @@ public class ImportPrivKeyTask extends AsyncTask<String, String, String> {
                         BRCoreKey signingKey = new BRCoreKey(key);
 
                         mTransaction.getCoreTx().sign(signingKey, walletManager.getForkId());
-                        BRCorePeerManager peerManager = iso.equalsIgnoreCase("BTC") ? ((WalletBitcoinManager) walletManager).getPeerManager() : ((WalletBchManager) walletManager).getPeerManager();
+                        BRCorePeerManager peerManager = iso.equalsIgnoreCase("SUM") ? ((WalletBitcoinManager) walletManager).getPeerManager() : ((WalletBchManager) walletManager).getPeerManager();
 
                         if (!mTransaction.getCoreTx().isSigned()) {
                             String err = "transaction is not signed";

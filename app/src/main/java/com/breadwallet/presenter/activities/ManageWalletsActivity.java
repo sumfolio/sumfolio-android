@@ -62,7 +62,7 @@ public class ManageWalletsActivity extends BaseSettingsActivity implements OnSta
             TokenItem tokenItem = null;
             String tokenSymbol = mTokens.get(i).symbol;
 
-            if (!tokenSymbol.equalsIgnoreCase("btc") && !tokenSymbol.equalsIgnoreCase("bch") &&
+            if (!tokenSymbol.equalsIgnoreCase("sum") && !tokenSymbol.equalsIgnoreCase("bch") &&
                     !tokenSymbol.equalsIgnoreCase("eth") && !tokenSymbol.equalsIgnoreCase("brd")) {
 
                 BREthereumToken tk = WalletEthManager.getInstance(this).node.lookupToken(info.contractAddress);
@@ -73,8 +73,8 @@ public class ManageWalletsActivity extends BaseSettingsActivity implements OnSta
                     tokenItem = new TokenItem(tk.getAddress(), tk.getSymbol(), tk.getName(), null);
 
 
-            } else if (tokenSymbol.equalsIgnoreCase("btc"))
-                tokenItem = new TokenItem(null, "BTC", "Bitcoin", null);
+            } else if (tokenSymbol.equalsIgnoreCase("sum"))
+                tokenItem = new TokenItem(null, "SUM", "Sumcoin", null);
 
             else if (tokenSymbol.equalsIgnoreCase("bch"))
                 tokenItem = new TokenItem(null, "BCH", "Bitcoin Cash", null);
