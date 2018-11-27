@@ -4,7 +4,7 @@
 # Sumfolio for Android
 
 [![download](/images/icon-google-play.png)]
-(https://play.google.com/store/apps/details?id=com.)
+(https://play.google.com/store/apps/details?id=com.sumfolio)
 
 ## Sumcoin Wallet
 
