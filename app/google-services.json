@@ -1,16 +1,16 @@
 {
   "project_info": {
     "project_number": "1094171723819",
-    "firebase_url": "https://breadwallet-c14dc.firebaseio.com",
-    "project_id": "breadwallet-c14dc",
-    "storage_bucket": "breadwallet-c14dc.appspot.com"
+    "firebase_url": "https://sumfolio-c14dc.firebaseio.com",
+    "project_id": "sumfolio-c14dc",
+    "storage_bucket": "sumfolio-c14dc.appspot.com"
   },
   "client": [
     {
       "client_info": {
         "mobilesdk_app_id": "1:1094171723819:android:424ca306cf8b29cf",
         "android_client_info": {
-          "package_name": "com.breadwallet"
+          "package_name": "com.sumfolio"
         }
       },
       "oauth_client": [
@@ -18,7 +18,7 @@
           "client_id": "1094171723819-gdgb2nmdcjufsraushmbn7a2mobldupf.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.breadwallet",
+            "package_name": "com.sumfolio",
             "certificate_hash": "f29c30b418eb982b9c042828e5a625e0e294ec71"
           }
         },

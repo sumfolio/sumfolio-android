@@ -2,16 +2,16 @@ apply plugin: 'com.android.application'
 apply plugin: 'io.fabric'
 
 android {
-    compileSdkVersion = 27
+    compileSdkVersion = 28
     buildToolsVersion = '28.0.3'
 
     defaultConfig {
         testInstrumentationRunner = 'android.support.test.runner.AndroidJUnitRunner'
-        applicationId = 'com.breadwallet'
-        minSdkVersion 23
-        targetSdkVersion 27
-        versionCode 291
-        versionName "1.0.0"
+        applicationId = 'com.sumfolio'
+        minSdkVersion 22
+        targetSdkVersion 28
+        versionCode 292
+        versionName "0.0.2"
         multiDexEnabled true
 
         // Similar to other properties in the defaultConfig block,
@@ -54,7 +54,7 @@ android {
 
     productFlavors {
         brd {
-            applicationId = "com.breadwallet"
+            applicationId = "com.sumfolio"
             dimension "mode"
             resValue "string", "app_name", "Sumfolio"
             buildConfigField "boolean", "BITCOIN_TESTNET", "false"
